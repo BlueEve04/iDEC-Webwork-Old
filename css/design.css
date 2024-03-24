@@ -1,0 +1,182 @@
+/* 为navbar-hz添加z-index，防止section0的相对定位遮住 */
+.navbar-hz {
+    z-index: 999;
+}
+
+.section0 {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.description1 {
+    position: absolute;
+    top: 40%;
+    z-index: 1;
+    width: 60% !important;
+    left: 20%;
+}
+
+/* 侧边导航栏 */
+.cbnav {
+    width: 180px;
+    height: 270px;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: fixed;
+    font-size: 16px;
+    left: -180px;
+    top: 28%;
+    border-radius: 0 12px 12px 0;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 999;
+}
+
+.cb3 {
+    line-height: 90px;
+}
+
+.cb2,
+.cb1 {
+    line-height: 45px;
+}
+
+.cbnav li {
+    width: 180px;
+    height: 90px;
+
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.cbnav li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.cbnav a {
+    color: rgb(0, 0, 0);
+    display: block;
+    text-decoration: none;
+}
+
+.cb {
+    font-family: 'icomoon';
+}
+
+#cb {
+    display: none;
+}
+
+#cb:checked~.cbnav {
+    left: 0px;
+}
+
+#cb:checked~.label {
+    left: 180px;
+}
+
+.icon-menu {
+    color: orange;
+}
+
+label {
+    width: 15px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 0 4px 4px 0;
+    display: inline-block;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    line-height: 60px;
+    position: fixed;
+    left: 0px;
+    top: 40%;
+    transition: 0.5s;
+    opacity: 0.8;
+    z-index: 999;
+}
+
+/* 锚点定位 */
+.Anchor-point {
+    position: absolute;
+    /*控制距离顶部 100px*/
+    top: -100px;
+    visibility: hidden;
+}
+
+/* 论文主体 */
+.paper {
+    margin-bottom: 50px;
+    width: 80%;
+    margin-left: 15%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.467);
+    border-radius: 20px;
+    background-color: rgb(156, 207, 156);
+    padding: 50px;
+}
+
+.paper h5 {
+    text-indent: 2em;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.paper h2 {
+    margin-top: 50px;
+}
+
+.paper p {
+    text-indent: 2em;
+    font-size: 30px;
+}
+
+.paper em {
+    font-style: italic;
+}
+
+.paper-biaoti {
+
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+
+.paper-content .paper-biaoti,
+.paper-content h2 {
+    text-align: center;
+    position: relative;
+}
+
+/* 论文主体里面的图片部分 */
+.paper-img1,
+.paper-img2,
+.paper-img3,
+.paper-img4 {
+    margin: auto;
+    width: 65%;
+}
+
+.paper-img3,
+.paper-img4 {
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+.paper-img1 img,
+.paper-img2 img,
+.paper-img3 img,
+.paper-img4 img {
+    width: 100%;
+}
+
+/* 论文主体的文献部分 */
+.reference p {
+    text-indent: 0;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+#design_cb {
+    transition: 0.4s;
+}

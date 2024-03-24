@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页组复现代码</title>
+    <!-- 引用bootstrap5.css文件 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- 引用style.css文件 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 引用base.css 文件 -->
+    <link rel="stylesheet" href="../css/base.css">
+    <!-- 引用icomoon font文件 -->
+    <link rel="stylesheet" href="../css/icomoon.css">
+    <!-- 引用projects.css  -->
+    <link rel="stylesheet" href="../css/result.css">
+
+    <link rel="stylesheet" href="../css/preload.css">
+
+</head>
+
+<body>
+    <!--预加载页面脚本-->
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('preload');
+
+            setTimeout(function () {
+                loader.style.display = 'none';
+            }, 2000);
+        });
+    </script>
+    <div id="preload" class="preload">
+        <link rel="stylesheet" href="../css/preload.css">
+        <img src="../img/loader.gif" alt="Loading...">
+    </div>
+    <!-- 本main模块为bootstrap5导航栏模块 -->
+    <main class="navbar-hz">
+        <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Eighth navbar example">
+            <div class="container">
+                <!-- a标签为大logo -->
+                <a class="navbar-brand" href="#"><img src="../img/logo.png" alt="" class="logo"></a>
+                <!-- button为缩小页面后的button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07"
+                    aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsExample07">
+                    <!-- ul为小标签的盒子 -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <div class="nav-item m">
+                            <a href="../index.html"><img src="../img/icon1.png" alt="" class="ims"></a>
+                            <li class="nav-item-li">
+                                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                            </li>
+                        </div>
+                        <div class="nav-item m">
+                            <a href="Description.html"><img src="../img/icon1.png" alt="" class="ims"></a>
+                            <li class="nav-item-li dropdown">
+                                <a class="nav-link dropdown-toggle" href="description.html"
+                                    data-bs-toggle="dropdown">Project</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../pages/projects.html">Description</a></li>
+                                    <li><a class="dropdown-item" href="../pages/design.html">design</a></li>
+                                    <li><a class="dropdown-item" href="../pages/result.html">result</a></li>
+                                    <li><a class="dropdown-item" href="#">supplement</a></li>
+                                    <li><a class="dropdown-item" href="#">Procool</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                        <div class="nav-item m">
+                            <img src="../img/icon1.png" alt="" class="ims">
+                            <li class="nav-item-li">
+                                <a class="nav-link active" aria-current="page" href="../pages/lab notebook.html">Lab
+                                    Notebook</a>
+                            </li>
+                        </div>
+                        <div class="nav-item">
+                            <img src="../img/icon1.png" alt="" class="ims">
+                            <li class="nav-item-li dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                    aria-expanded="false">Team</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../pages/team.html">Team</a></li>
+                                    <li><a class="dropdown-item" href="../pages/col.html">collabtion</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </main>
+    <!-- 头图 -->
+    <section class="section0">
+        <img src="../img/RESULT-8.png" alt="" class="description1">
+        <img src="../img/result.jpg" alt="" class="description">
+
+    </section>
+    <!-- Scroll to the topA按钮模块  -->
+    <section class="scrolltp-hz">
+        <span id="scrolltp" class="icon-arrow-up"></span>
+    </section>
+    <!-- 侧边导航栏 -->
+    <section id="result_cb">
+        <input type="checkbox" id="cb" checked="checked">
+        <label for="cb" class="label"><span class="icon-menu"></span></label>
+    
+        <div class="cbnav">
+            <li><a href="#part1" class="cb1">Construction of mutation libraries</a></li>
+            <li><a href="#part2" class="cb2">Performance testing of mutant PfdeAR-FdeR sensors</a></li>
+            <li><a href="#part3" class="cb3">How did we selected our evolutionary objects？</a></li>
+            <li><a href="#part4" class="cb4">Docking and Molecular Dynamic Simulations</a></li>
+            <li><a href="#part5" class="cb5">Riboswitch directed evolution via phage-assisted continuous evolution
+                    (PACE)</a></li>
+            <li><a href="#part6" class="cb6">reference</a></li>
+        </div>
+    </section>
+
+
+    <!-- 论文主体部分 -->
+    <section class="paper">
+        <div class="paper-content">
+            <h1 class="paper-biaoti">
+                <div class="Anchor-point" id="part1"></div>
+                Construction of mutation libraries
+            </h1>
+            <p>
+                Mutation libraries were established using two strategies: error-prone PCR (epPCR) and site-directed
+                mutagenesis. Two
+                rounds of epPCR targeting the fdeR gene with the StarMut Random Mutagenesis Kit, constructing a mutation
+                library of
+                5.9×10<sup>6</sup>mutants. Optimization of the PCR ion environment via gradient experiments resulted in
+                a stable
+                epPCR system with
+                an appropriate mutation rate, ranging from 5 ~ 22 mutation bases per kilobase (kb) (Table S5).
+                Meanwhile, site-directed mutation was performed on the fdeR gene through seamless cloning, creating five
+                combinations of
+                mutation sites. Based on the known amino acid sequence of FdeR,<sup>1</sup> the three-dimensional (3D)
+                structure of
+                FdeR was
+                predicted using AlphaFold2<sup>2</sup> (Figure S3, S4A, and B). AutoDock 4.2.6<sup>3</sup> was employed
+                to explore potential
+                liquiritigenin
+                binding sites on FdeR (Figure S4C, D, and E). Following energy minimization principle, the optimal
+                docking result was
+                selected from 50 docking results, demonstrating hydrogen bond interactions between FdeR's Arg220,
+                Thr244, and Leu268 and
+                liquiritigenin (Figure 1A and B). Besides, the docking analysis of FdeR and promoter indicated
+                liquiritigenin is
+                unlikely to cause steric hindrance with DNA (Figure S5). The binding energy of this conformation was
+                within an
+                reasonable range, justifying its selection for site-directed mutation. Subsequently, a full mutation
+                scanning on amino
+                acids within 3 Å of liquiritigenin identified mutations L268W, H170Y, and H170W (Table 1).<sup>4</sup>
+                Containing
+                five mutation
+                combinations: L268W, H170Y, H170W, L268W + H170Y and L268W + H170W, the site-directed mutation library
+                was transformed
+                into <em>E. coli BL21 </em>for subsequent fluorescence screening experiments.
+            </p>
+            <h3>Table 1. Main characteristics of FdeR single mutation prediction</h3>
+            <section class="table1">
+                <table cellpadding="0" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Index</th>
+                            <th>Mutation</th>
+                            <th>Mutation Energy (kcal/mol)</th>
+                            <th>Effect</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>A:HIS170>TRP</td>
+                            <td>-0.83</td>
+                            <td>STABILIZING</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>A:LEU268>TYR</td>
+                            <td>-0.73</td>
+                            <td>STABILIZING</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>A:HIS170>TYR</td>
+                            <td>-0.57</td>
+                            <td>STABILIZING</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <div class="paper-img1"><img src="../img/figure 1.png" alt=""></div>
+            <h5><strong>Figure 1. </strong>(A) Hydrogen Bond Contacts between FdeR and liquiritigenin. Amino acid
+                residues on FdeR that form hydrogen
+                bond contacts with liquiritigenin are labeled and represented using ball-and-stick models. Yellow dashed
+                lines represent
+                hydrogen bonds, and the numbers labeled above indicate the bond lengths. (B) Interactions between FdeR
+                and
+                liquiritigenin, including hydrogen bonds and various π bonds, as well as the bond lengths for each type
+                of bond.</h5>
+            <h2>
+                <div class="Anchor-point" id="part2"></div>
+                <strong>Performance testing of mutant PfdeAR-FdeR sensors</strong>
+            </h2>
+            <p>
+                With a sorting rate of up to 70,000 events per second, FACS technology was applied to screening for
+                mutants that
+                specifically and efficiently identify liquiritigenin to while having no or only low responsiveness to
+                naringenin (Figure
+                2 and Figure S6).
+            </p>
+            <div class="paper-img2"><img src="../img/Figure 2.png" alt=""></div>
+            <h5><strong>Figure 2.</strong> Flow chart of mutants screening. (1) Add liquiritigenin to library; (2) Sort
+                cells on the top 5% within the
+                positive gate; (3) Add naringenin to sorted cells; (4) Sort cells on the bottom 5% within negative gate;
+                (5) Inculate
+                culture into 96 deep-well plates; (6) Resuspend with 1× PBS and transfer cell resuspension to 96-well
+                plates; (7)
+                Measure fluorescence by a microplate reader.</h5>
+            <p>
+                In the first round of epPCR, six parallel epPCR systems were established for positive screening.
+                Supplemented with 0.5
+                mM liquiritigenin and naringenin separately, positive selections and negative selections were performed
+                on the library
+                (Figure 3A and B). Subsequently, 320 individual clones were used for 96-well microplate screening.
+            </p>
+            <div class="paper-img3"><img src="../img/Figure 3.png" alt=""></div>
+            <h5><strong>Figure 3. Flow cytometry analysis partly and FACS screening of the epPCR-2 and -4
+                    library.</strong>Rounds of FACS screening were
+                performed alternating positive sorting (library culture in the presence of 0.5 mM in the first round of
+                epPCR or 0.35 mM
+                in the second round of epPCR liquiritigenin and sorting of the events in the top of the histogram) and
+                negative sorting
+                (library culture in the presence of 0.5 mM in the first round of epPCR or 1.0 mM naringenin in the
+                second round of epPCR
+                and sorting of the events in the bottom of the fluorescence histogram). Round 1 of the epPCR library:
+                (A) Positive
+                screening was analyzed in a FCS-A vs. FITC-A scatter plot and the GFP Neg. (37.7%) and GFP Pos. (7.29%)
+                gates were set.
+                An Events vs. FITC-A histogram plot was created and the Pos. Sort gate was delimitated to sort the 7.29%
+                most
+                fluorescent events. (B) Negative screening was analyzed in a FCS-A vs. FITC-A scatter plot and the GFP
+                Neg. (56.5%) and
+                GFP Pos. (0.39%) gates were set. An Events vs. FITC-A histogram plot was created and the Pos. Sort gate
+                was delimitated
+                to sort the 5.77% least fluorescent events. Rouns 2 of the epPCR library: (C) Positive screening was
+                analyzed in a FCS-A
+                vs. FITC-A scatter plot and the GFP Neg. (54.1%) and GFP Pos. (20.3%) gates were set. An Events vs.
+                FITC-A histogram
+                plot was created and the Pos. Sort gate was delimitated to sort the 5.96% most fluorescent events. (D)
+                Negative
+                screening was analyzed in a FCS-A vs. FITC-A scatter plot and the GFP Neg. (18.7%) and GFP Pos. (6.92%)
+                gates were set.
+                An Events vs. FITC-A histogram plot was created and the Pos. Sort gate was delimitated to sort the 6.91%
+                least
+                fluorescent events.</h5>
+
+            <p>This yielded a mutant library with a 2-10-fold increase in liquiritigenin response intensity compared
+                to the wild type
+                (Figure 4A). Among them, Mut_49 stood out, displaying a remarkable 10-fold increase in peak
+                fluorescence compared to the
+                wild type. To further enhance the sensitivity and specificity of this biosensor in responding to
+                liquiritigenin, we
+                subjected four variants, namely Mut_39, Mut_49, Mut_58, and Mut_81, with favorable fluorescence
+                characteristics to the
+                next round of epPCR (Figure 3C and D). Finally, Mut_49_70 with a fluorescence intensity nearly 100
+                times higher than the
+                wild type was isolated (Figure 4B), indicating a significant enhancement in this biosensor in
+                responding to
+                liquiritigenin.</p>
+            <div class="paper-img4"><img src="../img/Figure 4.png" alt=""></div>
+            <h5><strong>Figure 4. Comparison of the fluorescence intensities of mutants and the wild-type to
+                    liquiritigenin.</strong>
+                (A) Mutants
+                obtained from the first round epPCR. (B) Mutants obtained from the second round epPCR. Mutants and
+                wild-type were
+                induced with 1 mM liquiritigenin for 12 hours. The green bars represent the fluorescence intensities
+                of different
+                mutants, while the blue bars represent the fluorescence intensity of the wild-type.</h5>
+            <p>In site-directed mutation experiments, we performed a 96-deep well microplate screening with 1.0 mM
+                liquiritigenin or
+                1.0 mM naringenin. Regrettably, the mutants exhibit no significant increase in response intensity to
+                liquiritigenin or
+                naringenin compared to the wild-type FdeR (Figure 5). Consequently, a dose-response analysis for
+                these mutants was not
+                conducted, necessitating a reevaluation of our bioinformatics-based predictions.</p>
+            <p>R. Wassem et al.5 demonstrated that FdeR recognizes and binds to the PfdeA promoter, inhibiting RNA
+                polymerase access.
+                Upon binding flavonoids, like naringenin, FdeR undergoes conformational changes altering its
+                DNA-binding site, enabling
+                RNA polymerase binding and transcription initiation. Initial molecular docking focused on the
+                individual FdeR monomer
+                interaction with liquiritigenin, neglecting dynamic changes in FdeR binding to the PfdeA promoter
+                and its oligomeric
+                state in vivo. Future research will readdress this aspect through molecular docking to identify
+                novel mutation sites.5</p>
+            <div class="paper-img5"><img src="../img/定点突变数据图柱状带误差棒4.png" alt=""></div>
+            <h5><strong>Figure 5. Dose responses to liquiritigenin and naringenin of different mutantgensis
+                    constructs.</strong> Wild-type (WT) and five
+                combinations of mutantgensis L268W, H170Y, H170W, H170W + L268W, H170Y + L268W were cultivated for
+                12 h in the presence
+                of increasing concentrations of liquiritigenin (blue) and naringenin (red) in 500 µM. Error bars are
+                based on the
+                standard deviation of a minimum of biological triplicate.</h5>
+            <h2>
+                <div class="Anchor-point" id="part2"></div>
+                <strong>Performance testing of mutant PfdeAR-FdeR sensors</strong>
+            </h2>
+            <p>Based on the 96-well microplate fluorescence screening, eight mutants with high fluorescence
+                intensity responses to
+                liquiritigenin were selected for gradient experiments, varying liquiritigenin concentration and
+                induction time, to
+                characterize their performance as biosensor, including sensitivity, detection range, response time,
+                and specificity,
+                modeled using Hill functions to analyze dose impact.5 We defined operational range as the ligand
+                concentration range and
+                response intensity as fluorescence intensity divided by OD 600. We also introduced a Noise parameter
+                to quantify average
+                relative error in fluorescence response across concentrations, a vital aspect in biosensor
+                development and application.</p>
+            <p>Compared to the initial state, all eight mutants showed substantial 10-100-fold enhancements in
+                fluorescence response
+                intensity (Figure 4B), exhibiting a positive correlation within the 0-1 mM liquiritigenin
+                concentration range, with most
+                reaching a plateau at 0.5 mM liquiritigenin (Figure 6, Table S4). Notably, Mut_49_70 and Mut_49_39
+                exhibited more higher
+                fluorescence intensity and a broader detection range. Even at 1 mM liquiritigenin, their response
+                curves continued to
+                show an upward trend, while Noise parameters both remained around 20%. Next, the response time
+                capabilities of the eight
+                mutants were assessed (Figure 7). While the wild-type FdeR displayed an S-shaped time response
+                curve, with fluorescence
+                intensity increasing soomthly within 6 hours and peaking at 10 hours, Mut_49_70 exhibited a
+                significantly longer
+                response time. It showed rapid early-stage intensity rise within 2 hours, reaching its peak at
+                approximately 12 hours,
+                indicating Mut_49_70 can respond quickly to liquiritigenin in the environment.</p>
+            <div class="paper-img6"><img
+                    src="../img/Figure 6. 原图Results-liquiritigenin response curve  of our mutants.png" alt=""></div>
+            <h5><strong>Figure 6. The dose-response curves for liquiritigenin of the wild type and the mutants are
+                    as follows:</strong>The blue curve
+                represents the dose-response curve for the wild type. Various green curves represent the
+                dose-response curves for the 8
+                mutants.</h5>
+            <div class="paper-img7"><img src="../img/Figure 7.原图 time response curve.jpg" alt="">
+            </div>
+
+            <h5><strong>Figure 7. The response time curves for liquiritigenin of the wild type and Mut_49_70 are as
+                    follows:</strong>The blue curve
+                represents the response time curve for the wild type. The green curve represents the response time
+                curve for the mutant
+                Mut_49_70.</h5>
+            <h2>
+                <div class="Anchor-point" id="part3"></div>
+                <strong>How did we selected our evolutionary objects？</strong>
+            </h2>
+            <p>
+                As a real-time, highly sensitive concentration detection element, a biosensor is just such a suitable
+                tool. But
+                biosensors that specifically and efficiently recognize liquiritigenin are not yet available. However,
+                naringenin, a
+                structural analog of liquiritigenin, can be efficiently identified by artificial biosensors in previous
+                research,
+                including transcription factors and riboswitches.6 Based on this, we selected allosteric transcription
+                repressor factor
+                FdeR and a riboswitch that identify naringenin as starting points.
+            </p>
+            <p>To evaluate specificity, we conducted dose-response experiments for naringenin in the 8 mutants (Figure 8
+                and Figure
+                S8). These mutants exhibited strong specificity, with most displaying over a 5-fold difference in
+                response intensity to
+                liquiritigenin compared to naringenin. Notably, Mut_49_70 showed the highest fluorescence intensity
+                among the mutants,
+                exceeding 1.7×107 a.u.. However, its response intensity to naringenin also ranked the highest, reaching
+                approximately
+                2.1×106 a.u. (still lower than wild-type FdeR). And Mut_49_39 exhibited impressive fluorescence response
+                intensity,
+                reaching up to 1.2×107 a.u., with significantly stronger specificity for liquiritigenin than Mut_49_70.
+                Mut_49_39
+                displayed a broader dynamic range, maintaining an upward trend in fluorescence intensity even at a 1.0
+                mM liquiritigenin
+                concentration, which is often considered as an ideal characteristic for a biosensor.
+            </p>
+
+            <div class="paper-img8"><img src="../img/Figure 8改.png" alt=""></div>
+            <h5><strong>Figure 8. Fluorescence intensities of different mutants to liquiritigenin and
+                    naringenin.</strong>(A) Fluorescence intensities of
+                8 mutants at 1 mM liquiritigenin and naringenin, where green bars represent the liquiritigenin, and
+                orange bars
+                represent the naringenin. (B) The dose-response curves for the Mut_49_39 mutant to liquiritigenin and
+                naringenin. (C)
+                The dose-response curves of the Mut_49_70 mutant to liquiritigenin and naringenin. The green curve
+                represents
+                liquiritigenin, and the orange curve represents naringenin in the dose-response curves for both ligands.
+            </h5>
+            <p>Additionally, We identified mutations, including D71E, S140P, M191T, and S297C, enriched in most mutants.
+                Remarkably,
+                elongation mutations were observed in Mut_33, Mut_48, Mut_49, and Mut_64, enhancing their responsiveness
+                and specificity
+                to liquiritigenin (Figure 9A and 4). Compared to Mut_49, F106L and V134L mutations enriched in
+                Mut_49_75, Mut_49_77,
+                Mut_49_78, Mut_49_18, and Mut_49_36, while E163V and I308S mutations were enriched in Mut_49_40 and
+                Mut_49_41 (Figure
+                9B). And Mut_49_39 and Mut_49_70 showed no additional mutations, but an mutation (G to A) was detected
+                between the
+                promoter and RBS, potentially influencing biosensor performance at the transcriptional or translational
+                level, resulting
+                in both mutants constructing the best-performing biosensors. These sequencing results serve as the
+                foundation for
+                subsequent molecular dynamics simulations.</p>
+            <p>In summary, among the 8 mutants studied, Mut_49_39 and Mut_49_70 demonstrated a broader response range
+                (exceeding 1 mM),
+                faster response kinetics (within 2 hours), and a relatively normal Noiseparameter (about 20%).
+                Consequently, Mut_49_39
+                and Mut_49_70 hold substantial potential for constructing highly efficient and specific liquiritigenin
+                biosensors.</p>
+            <div class="paper-img9"><img src="../img/Figure 9改.png" alt=""></div>
+
+            <h5><strong>Figure 9. The amino acid mutation heatmap of the mutants.</strong>(A) After the first round of
+                error-prone PCR, six mutants were
+                identified. Among them, four mutants exhibited enrichment in mutations at S140P, M191T, and S297C, and
+                leading to
+                extended mutations spanning twelve amino acids. (B) The mutants obtained after the second round of
+                error-prone PCR,
+                using Mut_49 as a template, were sequenced and analyzed.</h5>
+            <h2>
+                <div class="Anchor-point" id="part4"></div>
+                <strong>Docking and Molecular Dynamic Simulations</strong>
+            </h2>
+            <p>
+                After predicting the three-dimensional structure of Mut_49, this mutant was docked with liquiritigenin,
+                analying changes
+                in intermolecular forces and binding pocket hydrophobicity(Figure 10). The results indicated that Mut_49
+                revealed higher
+                hydrophobicity in the binding region compared to the wild-type, suggesting enhanced affinity and
+                specificity for
+                liquiritigenin. Unfortunately, upon analyzing its mutation energy, it was found that all mutations were
+                neutral,
+                contradicting the experimental results.</p>
+            <div class="paper-img10"><img src="../img/Figure 10改.png" alt=""></div>
+
+            <h5><strong>Figure 10. (A) Hydrogen bond interactions between Mut_49 and
+                    liquiritigenin.</strong>Liquiritigenin and the amino acid residues
+                of Mut_49 that have hydrogen bond interactions are labeled and shown in ball-and-stick model. Yellow
+                dashed lines
+                represent hydrogen bonds, and the numbers on them indicate the hydrogen bond lengths. (B) The
+                intermolecular forces
+                between mutant 49 and liquiritigenin, such as hydrogen bonds and various π bonds, and the bond lengths
+                of each type of
+                bond.</h5>
+
+            <h3>
+                <div class="Anchor-point" id="part5"></div>
+                <strong>Table 2. Main characteristics of Mut_49 mutation prediction</strong>
+            </h3>
+            <section class="table2">
+                <table cellpadding="0" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Index</th>
+                            <th>Mutation</th>
+                            <th>Mutation Energy (kcal/mol)</th>
+                            <th>Effect</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>A: VAL134>LEU</td>
+                            <td>0.05</td>
+                            <td>NEUTRAL</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>A: PHE106>LEU</td>
+                            <td>0.07</td>
+                            <td>NEUTRAL</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>A: PHE106>LEU <br>
+                                A: PHE13>LEU </td>
+                            <td>0.07</td>
+                            <td>NEUTRAL</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>A: MET60>LEU</td>
+                            <td>0.00</td>
+                            <td>NEUTRAL</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>A: HIS246>GLU</td>
+                            <td>0.41</td>
+                            <td>NEUTRAL</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <p>We then carried out molecular dynamics simulations on the complexes of FdeR with liquiritigenin and
+                Mut_49 with
+                liquiritigenin, respectively.6 The structural changes and the binding between WT and liquiritigenin were
+                investigated by
+                viewing the system potential energy, Rg, RMSD, and interaction energy (Figure 11). MMPBSA analysis was
+                carried out to
+                correlate the MD data with peptide characteristics (Table 3). The interaction energy of the WT was about
+                15% lower than
+                that of MU, demonstrating that the binding affinity between the WT and the receptor was much higher than
+                the mutant
+                type.</p>
+            <div class="paper-img11"><img src="../img/Figure 11改.png" alt=""></div>
+
+            <h5><strong>Figure 11. Molecular dynamics trajectory analysis of WT and Mut_49. WT stands for FdeR and MU
+                    stands for
+                    Mut_49.</strong>(A) The
+                RMSD curve of the protein during the protein-ligand complex simulation process (the complex reached
+                equilibrium after 20
+                ns, indicating that the whole simulation process was stable and reliable); (B) The Rg curve of the
+                protein during the
+                protein-ligand complex simulation process (the radius of gyration (Rg) is used to prove the compactness
+                of the protein
+                structure during the simulation process, it is the distance between the centroid of all atoms and their
+                ends at a
+                specific time interval. During the whole complex MD simulation process, the Rg value fluctuation of MU
+                was larger than
+                that of WT, indicating that WT might bind more tightly with the small molecule); (C) The RMSF curve of
+                the protein
+                during the protein-ligand complex simulation process (the fluctuation of each atom relative to its
+                average position is
+                calculated, which characterizes the average of the structural changes over time, and gives a
+                characterization of the
+                flexibility of each region of the protein. The RMSF value of the protein in the MU-ligand complex group
+                was larger than
+                that of the protein in the WT-ligand complex group in the 0-75 range, indicating that the flexibility of
+                MU was greater
+                than that of WT).</h5>
+            <h3>Table 3. Comparison of statistics between WT and MU</h3>
+            <section class="table3">
+                <table cellpadding="0" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Energy</th>
+                            <th>WT</th>
+                            <th>MU</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Van der Waals Energy (KJ/mol)</td>
+                            <td>-156.689</td>
+                            <td>-131.048</td>
+                        </tr>
+                        <tr>
+                            <td>Electrostatic Energy (kJ/mol)</td>
+                            <td>-29.978</td>
+                            <td>-7.192</td>
+                        </tr>
+                        <tr>
+                            <td>Polar solvation Energy (KJ/mol)</td>
+                            <td>101.397</td>
+                            <td>67.802</td>
+                        </tr>
+                        <tr>
+                            <td>Nonpolar solvation Energy (KJ/mol)</td>
+                            <td>-16.180</td>
+                            <td>-17.227</td>
+                        </tr>
+                        <tr>
+                            <td>Total Binding Energy (KJ/mol)</td>
+                            <td>-101.451</td>
+                            <td>-87.666</td>
+                        </tr>
+                        <tr>
+                            <td>T∆S(KJ/mol)</td>
+                            <td>4.444</td>
+                            <td>10.645</td>
+                        </tr>
+                        <tr>
+                            <td>Total Binding Free Energy (KJ/mol)</td>
+                            <td>-97.007</td>
+                            <td>-77.021</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <h5>Note: In order to better explain the interaction energy between the protein and the ligand, we used the
+                gmx_mmpbsa
+                script (https://jerkwin.github.io/gmxtool/) to determine the binding energy of all the protein-ligand
+                complexes at the
+                equilibrium stage. In the MMPBSA method, the total binding energy is decomposed into four independent
+                parts
+                (electrostatic interaction, van der Waals interaction, polar solvation and non-polar solvation
+                interactions).</h5>
+            <h2>
+                <div class="Anchor-point" id="part5"></div>
+                <strong>Riboswitch directed evolution via phage-assisted continuous evolution (PACE)</strong>
+            </h2>
+            <p>Currently, we have successfully constructed the plasmids (SP, AP and CP) required for PACE (Figure 12,
+                Figure S13,S14).
+            </p>
+
+            <div class="paper-img12"><img src="../img/Figure 12改.png" alt=""></div>
+            <h5><strong>Figure 12. Activity-independent phage plaque assay.</strong>(A) SP-Mid2 phage and (B) SP-High2
+                phage; from the upper right
+                quadrant, upper left quadrant, lower right quadrant, and lower left quadrant, the phage concentrations
+                are 100, 10-2,
+                10-4, 10-6 in order, and the number of phages in appropriate in quadrants can be used to quantify the
+                titer.</h5>
+            <p>We also successfully built the PACE device, tuned the operational parameters of syringe pumps and
+                peristaltic pumps, as
+                well as the length of needles in the chemostat and lagoons(Figure 13). This ensured the host bacteria
+                maintained a
+                stable cell density and allowed M13 phage propagate normally in the lagoons. The mutation rate μbp of
+                DP6 has been
+                measured as 1.007×10-5, and the PACE system has been initiated. We will isolate promising individuals
+                from this pool and
+                further test their performance as biosensors.</p>
+            <div class="paper-img13"><img src="../img/Figure 13改.png" alt=""></div>
+            <h5><strong>Figure 13. Schematic of the PACE apparatus.</strong>Coupled to each other, allowing the phage to
+                continuously cross-seed between
+                the two lagoons. Chemostat. Provide constant cell density for lagoons for M13 bacteriophage infection.
+                Lagoons, Phage
+                infect and propagate. Inducers. Initiate the expression of mutagenic genes to mutate at the genome-wide
+                level of E.
+                coli. (B) Photo of our PACE apparatus. The picture on the left shows syringe pumps(0.3 ml/h) and
+                peristaltic pumps(0.258
+                ml/min). The picture on the right shows DRM carboy, the chemostat and lagoons.</h5>
+            <h2>
+                <div class="Anchor-point" id="part6"></div>
+                <strong>reference</strong>
+            </h2>
+            <div class="reference">
+                <p class="refe1">J. Vandierendonck, Y. Girardin P. De Bruyn et al, A Multi-Layer-Controlled Strategy for
+                    Cloning and Expression of Toxin
+                    Genes in Escherichia coli. Toxins (Basel) 15, (2023).
+
+                </p>
+                <p class="refe1-a">DOI:<a
+                        href="http://doi.org/10.3390/toxins15080508">http://doi.org/10.3390/toxins15080508
+                    </a></p>
+                <p class="refe1">2. T.P. Huang, Z.J. Heins S.M. Miller et al, High-throughput continuous evolution of
+                    compact Cas9 variants targeting
+                    single-nucleotide-pyrimidine PAMs. Nat Biotechnol 41, 96-107, (2023).
+
+                </p>
+                <p class="refe1-a">DOI:<a
+                        href="http://doi.org/10.1038/s41587-022-01410-2">http://doi.org/10.1038/s41587-022-01410-2</a>
+                </p>
+                <p class="refe1">3. Y. Katsuyama, M. Matsuzawa N. Funa et al, Production of curcuminoids by Escherichia
+                    coli carrying an artificial
+                    biosynthesis pathway. Microbiology (Reading) 154, 2620-2628, (2008).
+
+                </p>
+                <p class="refe1-a">DOI:<a
+                        href="http://doi.org/10.1099/mic.0.2008/018721-0">http://doi.org/10.1099/mic.0.2008/018721-0</a>
+                </p>
+                <p class="refe1">4. J. Li, F. Xu D. Ji et al, Diversion of metabolic flux towards 5-deoxy(iso)flavonoid
+                    production via enzyme
+                    self-assembly in Escherichia coli. Metabolic Engineering Communications13, e00185, (2021).
+                </p>
+                <p class="refe1-a">DOI:<a
+                        href="https://doi.org/10.1016/j.mec.2021.e00185">https://doi.org/10.1016/j.mec.2021.e00185</a>
+                </p>
+                <p class="refe1">5. S.G. Stahlhut, S. Siedler S. Malla et al, Assembly of a novel biosynthetic pathway
+                    for production of the plant
+                    flavonoid fisetin in Escherichia coli. Metabolic engineering 31, 84-93, (2015).
+                </p>
+                <p class="refe1-a">DOI:<a
+                        href="https://doi.org/10.1016/j.ymben.2015.07.002">https://doi.org/10.1016/j.ymben.2015.07.002</a>
+                </p>
+                <p class="refe1">6. S. Jang, S. Jang Y. Xiu et al, Development of Artificial Riboswitches for Monitoring
+                    of Naringenin In Vivo. ACS Synth
+                    Biol 6, 2077-2085, (2017).
+                </p>
+                <p class="refe1-a">DOI:<a
+                        href="http://doi.org/10.1021/acssynbio.7b00128">http://doi.org/10.1021/acssynbio.7b00128</a>
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <!-- Footer  -->
+    <section class="footer">
+        <h1 class="evolution">Evolution</h1>
+        <div class="grid-wrapper">
+            <div class="grid-logo">
+                <img src="../img/iDEC Logo2.png" alt="" class="footlogo">
+                <img src="../img/NJAU.png" alt="" class="footlogo">
+                <img src="../img/sky.png" alt="" class="footlogo">
+                <img src="../img/诺1.png" alt="" class="footlogo">
+                <img src="../img/NEB.png" alt="" class="footlogo">
+                <img src="../img/genstar.png" alt="" class="footlogo">
+                <img src="../img/ala.jpg" alt="" class="footlogo">
+            </div>
+            <!-- lianjie1-4为footer右侧四列 -->
+            <div class="lianjie1">
+                <h1><a href="">Home</a></h1>
+            </div>
+            <div class="lianjie2">
+                <h1><a href="">Project</a></h1>
+                <h1><a href="">Description</a></h1>
+                <h1><a href="">Design</a></h1>
+                <h1><a href="">Results</a></h1>
+                <h1><a href="">Supplement</a></h1>
+                <h1><a href="">Protocol</a></h1>
+            </div>
+            <div class="lianjie3">
+                <h1><a href="">Lab Notebook</a></h1>
+            </div>
+            <div class="lianjie4">
+                <h1><a href="">Team</a></h1>
+                <h1><a href="">Collaboration</a></h1>
+            </div>
+
+        </div>
+    </section>
+    <!-- 引入boots5js文件 -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- 引入project.js文件 -->
+    <script src="../js/projects.js"></script>
+</body>
+
+</html>

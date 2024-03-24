@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页组复现代码</title>
+    <!-- 引用bootstrap5.css文件 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- 引用style.css文件 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 引用base.css 文件 -->
+    <link rel="stylesheet" href="../css/base.css">
+    <!-- 引用icomoon font文件 -->
+    <link rel="stylesheet" href="../css/icomoon.css">
+    <!-- 引用projects.css  -->
+    <link rel="stylesheet" href="../css/projects.css">
+    
+    <link rel="stylesheet" href="../css/preload.css">
+
+</head>
+
+<body>
+    <!--预加载页面脚本-->
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('preload');
+
+            setTimeout(function () {
+                loader.style.display = 'none';
+            }, 2000);
+        });
+    </script>
+    <div id="preload" class="preload">
+        <link rel="stylesheet" href="../css/preload.css">
+        <img src="../img/loader.gif" alt="Loading...">
+    </div>
+    <!-- 本main模块为bootstrap5导航栏模块 -->
+    <main class="navbar-hz">
+        <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Eighth navbar example">
+            <div class="container">
+                <!-- a标签为大logo -->
+                <a class="navbar-brand" href="#"><img src="../img/logo.png" alt="" class="logo"></a>
+                <!-- button为缩小页面后的button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07"
+                    aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsExample07">
+                    <!-- ul为小标签的盒子 -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <div class="nav-item m">
+                            <a href="../index.html"><img src="../img/icon1.png" alt="" class="ims"></a>
+                            <li class="nav-item-li">
+                                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                            </li>
+                        </div>
+                        <div class="nav-item m">
+                            <a href="Description.html"><img src="../img/icon1.png" alt="" class="ims"></a>
+                            <li class="nav-item-li dropdown">
+                                <a class="nav-link dropdown-toggle" href="description.html"
+                                    data-bs-toggle="dropdown">Project</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../pages/projects.html">Description</a></li>
+                                    <li><a class="dropdown-item" href="../pages/design.html">design</a></li>
+                                    <li><a class="dropdown-item" href="../pages/result.html">result</a></li>
+                                    <li><a class="dropdown-item" href="#">supplement</a></li>
+                                    <li><a class="dropdown-item" href="#">Procool</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                        <div class="nav-item m">
+                            <img src="../img/icon1.png" alt="" class="ims">
+                            <li class="nav-item-li">
+                                <a class="nav-link active" aria-current="page" href="../pages/lab notebook.html">Lab
+                                    Notebook</a>
+                            </li>
+                        </div>
+                        <div class="nav-item">
+                            <img src="../img/icon1.png" alt="" class="ims">
+                            <li class="nav-item-li dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                    aria-expanded="false">Team</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../pages/team.html">Team</a></li>
+                                    <li><a class="dropdown-item" href="../pages/col.html">collabtion</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </main>
+    <!-- 头图 -->
+    <!--以下是预加载显示页面-->
+
+    <section class="section0">
+        <img src="../img/description1.png" alt="" class="description1">
+        <img src="../img/description.jpg" alt="" class="description">
+
+    </section>
+    <!-- Scroll to the topA按钮模块  -->
+    <section class="scrolltp-hz">
+        <span id="scrolltp" class="icon-arrow-up"></span>
+    </section>
+    <!-- 侧边导航栏 -->
+<section id="description_cb" class="description_cb">
+    <input type="checkbox" id="cb" checked="checked">
+    <label for="cb" class="label"><span class="icon-menu"></span></label>
+    <div class="cbnav">
+        <li><a href="#part1" class="cb1">Background</a></li>
+        <li><a href="#part2" class="cb2">Prevalent methods of liquiritigenin production</a></li>
+        <li><a href="#part3" class="cb3">How did we selected our evolutionary objects？</a></li>
+        <li><a href="#part4" class="cb4">Our goal</a></li>
+        <li><a href="#part5" class="cb5">reference</a></li>
+    </div>
+</section>
+
+
+    <!-- 论文主体部分 -->
+    <section class="paper">
+        <!-- 下载按钮部分 -->
+        <div class="download">
+            <div class="ctn-download">
+                <a href="../img/2023 NAU-CHINA-DE.zip"><span class="icon-download2"></span>
+                    <p>Report</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="paper-content">
+            <h1 class="paper-biaoti">
+                <div class="Anchor-point" id="part1"></div>
+                Background
+            </h1>
+            <p>
+                Licorice, is an herbal plant renowned for its distinct sweet flavor. It is called "GAN CAO" in Chinese
+                and is derived
+                from the root or stem of <em>Glycyrrhiza glabra (G. glabra)</em>. Its primary active components consist
+                of
+                triterpenes and
+                flavonoids.
+            </p>
+            <p>
+                Liquiritigenin is a dihydroxyflavone, one of the main bioactive components extracted from licorice. It
+                has also been
+                applied in a variety of fields, such as healthare, cosmetic, antibiotic, plant physiology, and quality
+                indicator
+                component of licorice root. Furthermore, it also serves as an intermediate for the synthesis of drugs
+                with
+                anti-diabetic, anti-tuberculosis and other properties, offering significant potential and vast
+                application prospects in
+                the healthcare field.<sup>1</sup>
+            </p>
+            <div class="paper-img1"><img src="../img/1.png" alt=""></div>
+            <p>
+                However, the production of liquiritigenin still relies on low-yield plant extraction and chemical
+                synthesis
+                currently.
+                Here, we developed biosensors that could identify liquiritigenin specifically based on allosteric
+                transcription
+                factors
+                and riboswitches, enabling intracellular detection of liquiritigenin synthesis and screening of
+                liquiritigenin high
+                yielding strains, thus providing a solution for high-yielding biosynthesis of liquiritigenin.
+            </p>
+            <h2>
+                <div class="Anchor-point" id="part2"></div>
+                <strong>Prevalent methods of liquiritigenin production</strong>
+            </h2>
+            <p>
+                The prevalent methods of liquiritigenin production, such as plant extraction and chemical synthesis,
+                have their inherent
+                limitations. The former is constrained by long growth cycles, high costs, and low yields (approximately
+                1 gram from
+                250-33,000 g of dry leguminous plants). The latter involves toxic solvents, extreme reaction conditions,
+                and complex
+                molecular modifications, making it unsuitable for industrial production and harmful to the environment.
+            </p>
+            <div class="paper-img2"><img src="../img/des.png" alt=""></div>
+            <p>
+                Microbial production is an attractive candidate for flavonoid production with advantages like low energy
+                consumption,
+                minimal waste, environmental friendliness.<sup>2,3</sup>Although significant research has explored the
+                heterologous synthesis of
+                5-deoxy(iso) flavonoids in microbial hosts, the yield remains relatively low.<sup>4,5</sup>A tool is
+                needed for high-yield strain
+                screening to increase the yield of liquiritigenin and monitoring liquiritigenin in production.
+            </p>
+            <div class="paper-img3"><img src="../img/description-Prevalent methods of liquiritigenin production-2.png"
+                    alt=""></div>
+            <h2>
+                <div class="Anchor-point" id="part3"></div>
+                <strong>How did we selected our evolutionary objects？</strong>
+            </h2>
+            <p>
+                As a real-time, highly sensitive concentration detection element, a biosensor is just such a suitable
+                tool. But
+                biosensors that specifically and efficiently recognize liquiritigenin are not yet available. However,
+                naringenin, a
+                structural analog of liquiritigenin, can be efficiently identified by artificial biosensors in previous
+                research,
+                including transcription factors and riboswitches.6 Based on this, we selected allosteric transcription
+                repressor factor
+                FdeR and a riboswitch that identify naringenin as starting points.
+            </p>
+            <div class="paper-img4"><img src="../img/description-How did we selected our evolutionary objects？.png"
+                    alt=""></div>
+            <h2>
+                <div class="Anchor-point" id="part4"></div>
+                <strong>Our goal</strong>
+            </h2>
+            <p>
+                Therefore, we start with allosteric transcription repressor factor FdeR and riboswitches, and try to use
+                error-prone
+                PCR, site-directed mutation and phage-assisted continuous evolution (PACE) strategies to enable them to
+                specifically
+                recognize liquiritigenin</p>
+            <h2>
+                <div class="Anchor-point" id="part5"></div>
+                <strong>reference</strong>
+            </h2>
+            <div class="reference">
+                <p class="refe1">1. M. Ramalingam, H. Kim Y. Lee et al, Phytochemical and Pharmacological Role of
+                    Liquiritigenin and Isoliquiritigenin
+                    From Radix Glycyrrhizae in Human Health and Disease Models. Front Aging Neurosci 10, 348, (2018).
+                </p>
+                <p class="refe1-a">DOI:<a
+                        href="http://doi.org/10.3389/fnagi.2018.00348">http://doi.org/10.3389/fnagi.2018.00348</a></p>
+                <p class="refe1">2. J.A. Chemler, Y. Yan M.A. Koffas, Biosynthesis of isoprenoids, polyunsaturated fatty
+                    acids and flavonoids in
+                    Saccharomyces cerevisiae. Microb Cell Fact 5, 20, (2006).
+                </p>
+                <p class="refe1-a">DOI:<a
+                        href=" http://doi.org/10.1186/1475-2859-5-20">http://doi.org/10.1186/1475-2859-5-20</a></p>
+                <p class="refe1">3. Y. Katsuyama, M. Matsuzawa N. Funa et al, Production of curcuminoids by Escherichia
+                    coli carrying an artificial
+                    biosynthesis pathway. Microbiology (Reading) 154, 2620-2628, (2008).
+
+                </p>
+                <p class="refe1-a">DOI:<a
+                        href="http://doi.org/10.1099/mic.0.2008/018721-0">http://doi.org/10.1099/mic.0.2008/018721-0</a>
+                </p>
+                <p class="refe1">4. J. Li, F. Xu D. Ji et al, Diversion of metabolic flux towards 5-deoxy(iso)flavonoid
+                    production via enzyme
+                    self-assembly in Escherichia coli. Metabolic Engineering Communications13, e00185, (2021).
+                </p>
+                <p class="refe1-a">DOI:<a
+                        href="https://doi.org/10.1016/j.mec.2021.e00185">https://doi.org/10.1016/j.mec.2021.e00185</a>
+                </p>
+                <p class="refe1">5. S.G. Stahlhut, S. Siedler S. Malla et al, Assembly of a novel biosynthetic pathway
+                    for production of the plant
+                    flavonoid fisetin in Escherichia coli. Metabolic engineering 31, 84-93, (2015).
+                </p>
+                <p class="refe1-a">DOI:<a
+                        href="https://doi.org/10.1016/j.ymben.2015.07.002">https://doi.org/10.1016/j.ymben.2015.07.002</a>
+                </p>
+                <p class="refe1">6. S. Jang, S. Jang Y. Xiu et al, Development of Artificial Riboswitches for Monitoring
+                    of Naringenin In Vivo. ACS Synth
+                    Biol 6, 2077-2085, (2017).
+                </p>
+                <p class="refe1-a">DOI:<a
+                        href="http://doi.org/10.1021/acssynbio.7b00128">http://doi.org/10.1021/acssynbio.7b00128</a>
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <!-- Footer  -->
+    <section class="footer">
+        <h1 class="evolution">Evolution</h1>
+        <div class="grid-wrapper">
+            <div class="grid-logo">
+                <img src="../img/iDEC Logo2.png" alt="" class="footlogo">
+                <img src="../img/NJAU.png" alt="" class="footlogo">
+                <img src="../img/sky.png" alt="" class="footlogo">
+                <img src="../img/诺1.png" alt="" class="footlogo">
+                <img src="../img/NEB.png" alt="" class="footlogo">
+                <img src="../img/genstar.png" alt="" class="footlogo">
+                <img src="../img/ala.jpg" alt="" class="footlogo">
+            </div>
+            <!-- lianjie1-4为footer右侧四列 -->
+            <div class="lianjie1">
+                <h1><a href="">Home</a></h1>
+            </div>
+            <div class="lianjie2">
+                <h1><a href="">Project</a></h1>
+                <h1><a href="">Description</a></h1>
+                <h1><a href="">Design</a></h1>
+                <h1><a href="">Results</a></h1>
+                <h1><a href="">Supplement</a></h1>
+                <h1><a href="">Protocol</a></h1>
+            </div>
+            <div class="lianjie3">
+                <h1><a href="">Lab Notebook</a></h1>
+            </div>
+            <div class="lianjie4">
+                <h1><a href="">Team</a></h1>
+                <h1><a href="">Collaboration</a></h1>
+            </div>
+
+        </div>
+    </section>
+    <!-- 引入boots5js文件 -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- 引入project.js文件 -->
+    <script src="../js/projects.js"></script>
+</body>
+
+</html>

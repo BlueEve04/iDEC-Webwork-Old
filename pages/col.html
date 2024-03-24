@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页组复现代码</title>
+    <!-- 引用bootstrap5.css文件 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- 引用style.css文件 -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- 引用base.css 文件 -->
+    <link rel="stylesheet" href="../css/base.css">
+    <!-- 引用icomoon font文件 -->
+    <link rel="stylesheet" href="../css/icomoon.css">
+    <link rel="stylesheet" href="../css/preload.css">
+    <link rel="stylesheet" href="../css/col.css">
+    <!-- AOS -->
+    <link rel="stylesheet" href="../css/aos.css" />
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+    <!--以下是预加载显示页面-->
+    <!--预加载页面脚本-->
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('preload');
+
+            setTimeout(function () {
+                loader.style.display = 'none';
+            }, 2000);
+        });
+    </script>
+
+    <div id="preload" class="preload">
+        <link rel="stylesheet" href="../css/preload.css">
+        <img src="../img/loader.gif" alt="Loading...">
+    </div>
+    <!--预加载div，使用单独的css避免冲突-->
+    <!-- 本main模块为bootstrap5导航栏模块 -->
+    <main class="navbar-hz">
+        <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Eighth navbar example">
+            <div class="container">
+                <!-- a标签为大logo -->
+                <a class="navbar-brand" href="#"><img src="../img/logo.png" alt="" class="logo"></a>
+                <!-- button为缩小页面后的button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07"
+                    aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsExample07">
+                    <!-- ul为小标签的盒子 -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <div class="nav-item m">
+                            <a href="../index.html"><img src="../img/icon1.png" alt="" class="ims"></a>
+                            <li class="nav-item-li">
+                                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                            </li>
+                        </div>
+                        <div class="nav-item m">
+                            <a href="Description.html"><img src="../img/icon1.png" alt="" class="ims"></a>
+                            <li class="nav-item-li dropdown">
+                                <a class="nav-link dropdown-toggle" href="description.html"
+                                    data-bs-toggle="dropdown">Project</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../pages/projects.html">Description</a></li>
+                                    <li><a class="dropdown-item" href="../pages/design.html">design</a></li>
+                                    <li><a class="dropdown-item" href="../pages/result.html">result</a></li>
+                                    <li><a class="dropdown-item" href="#">supplement</a></li>
+                                    <li><a class="dropdown-item" href="#">Procool</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                        <div class="nav-item m">
+                            <img src="../img/icon1.png" alt="" class="ims">
+                            <li class="nav-item-li">
+                                <a class="nav-link active" aria-current="page" href="../pages/lab notebook.html">Lab
+                                    Notebook</a>
+                            </li>
+                        </div>
+                        <div class="nav-item">
+                            <img src="../img/icon1.png" alt="" class="ims">
+                            <li class="nav-item-li dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                    aria-expanded="false">Team</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../pages/team.html">Team</a></li>
+                                    <li><a class="dropdown-item" href="../pages/col.html">collabtion</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </main>
+    <div class="benti">
+        <section class="section0">
+            <img src="../img/COLLABORATION.png" alt="" class="headPicture">
+            <img src="../img/Collaboration-text.png" alt="" class="Text">
+        </section>
+        <div class="page">
+    
+    
+            <section class="s1">
+                <p class="title" id="i">Introduction</p>
+                <p class="content">The project we chose this year was difficult for undergraduates, but it was pleasing to
+                    have some help as we stumbled along the way. With great honor, we were glad to find some collaborators
+                    and communicated with them.</p>
+                <p class="content">They reminded us that we were not a single team but a traveller who would finally meet
+                    partners with a common goal.</p>
+            </section>
+    
+            <section class="s1">
+                <p class="title" id="n">NAU-China</p>
+                <p class="content">Being our brother team, iGEM from Nanjing Agriculture University provided us critical
+                    help. We shared the same lab and meeting room, we chatted with each other and supported each other. It
+                    is the iGEMers’support that gave us such motivation to complete the whole experiment.</p>
+                <img src="../img/collaboration-2.jpg" alt="" class="solo">
+            </section>
+    
+            <section class="fo">
+                <p class="title" id="c">CPU-China ＆ NEFU_China</p>
+                <p class="content">In collaboration with NEFU_China from Northeast Forestry University and CPU-CHINA from
+                    China Pharmaceutical University, we organized the Directed Evolution Joint Training Workshop from
+                    January 7th to February 5th, 2023. During this period, each team was responsible for delivering courses
+                    on directed evolution for all members to study, covering topics such as synthetic biology, directed
+                    evolution techniques, and bioinformatics software. Each team gained diverse knowledge from this training
+                    workshop. Our event not only provided a platform for international directed evolution competition
+                    participating teams to exchange ideas and deepen their understanding of directed evolution but also
+                    aimed to promote directed evolution to a wider audience.</p>
+                <div class="picw">
+                    <img src="../img/collaboration-1.jpg" alt="">
+                    <img src="../img/collaboration-3.png" alt="">
+                </div>
+    
+            </section>
+    
+            <section class="s1">
+                <p class="title" id="i2">iDEC China Association (iCA)</p>
+                <p class="content">In order to promote Directed Evolution and iDEC in China, we (NAU) have joined forces
+                    with SUSTech, CPU, NEFU and OUC to organize iDEC China Association in anticipation of </p>
+            </section>
+        </div>
+    </div>
+    <div class="empty">
+        
+    </div>
+
+
+    <!-- Footer  -->
+    <section class="footer">
+        <h1 class="evolution">Evolution</h1>
+        <div class="grid-wrapper">
+            <div class="grid-logo">
+                <img src="img/iDEC Logo2.png" alt="" class="footlogo">
+                <img src="img/NJAU.png" alt="" class="footlogo">
+                <img src="img/sky.png" alt="" class="footlogo">
+                <img src="img/诺1.png" alt="" class="footlogo">
+                <img src="img/NEB.png" alt="" class="footlogo">
+                <img src="img/genstar.png" alt="" class="footlogo">
+                <img src="img/ala.jpg" alt="" class="footlogo">
+            </div>
+            <!-- lianjie1-4为footer右侧四列 -->
+            <div class="lianjie1">
+                <h1><a href="">Home</a></h1>
+            </div>
+            <div class="lianjie2">
+                <h1><a href="">Project</a></h1>
+                <h1><a href="">Description</a></h1>
+                <h1><a href="">Design</a></h1>
+                <h1><a href="">Results</a></h1>
+                <h1><a href="">Supplement</a></h1>
+                <h1><a href="">Protocol</a></h1>
+            </div>
+            <div class="lianjie3">
+                <h1><a href="">Lab Notebook</a></h1>
+            </div>
+            <div class="lianjie4">
+                <h1><a href="">Team</a></h1>
+                <h1><a href="">Collaboration</a></h1>
+            </div>
+
+        </div>
+    </section>
+    <!-- 引入boots5js文件 -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- 引入project.js文件 -->
+    <script src="js/projects.js"></script>
+</body>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Markdown文档阅读器</title>
+    <!-- 引用bootstrap5.css文件 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/marked/0.8.1/marked.min.js"></script>
+    <script src="./js/marked.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        #sidebar {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        #content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        #sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        #sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        #sidebar ul li a:hover {
+            color: #666;
+        }
+
+        #document {
+            overflow-y: auto;
+            max-height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sidebar">
+        <ul>
+            <li><a href="#" onclick="loadDocument('./0.md')">Document 1</a></li>
+            <li><a href="#" onclick="loadDocument('./1.md')">Document 2</a></li>
+            <li><a href="#" onclick="loadDocument('./2.md')">Document 3</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <div id="document"></div>
+    </div>
+
+    <script>
+        function loadDocument(filename) {
+            fetch(filename)
+                .then(response => response.text())
+                .then(text => {
+                    document.getElementById('document').innerHTML = marked.parse(text);
+                })
+                .catch(error => console.error('Error loading Markdown file:', error));
+        }
+    </script>
+    <script src="./js/marked.js"></script>
+
+
+</body>
+
+</html>

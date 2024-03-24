@@ -1,0 +1,536 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.headpic img{
+    width: 100%;
+}
+
+/*文字样式*/
+.dex1-pass {
+    position: relative;
+    padding: 3rem;
+}
+
+.dex1-pass  h1:hover{
+    transform: scale(1.1);
+    cursor: default;
+}
+.dex1-pass p:hover {
+    transform: scale(1.1) translate3d(-20px,22px,0px);
+    cursor: default;
+}
+
+.dex1-pass h1{
+    margin-left: -130px;
+    font-size: 6vmin;
+    color: seagreen;
+    font-weight: 600;
+    margin-bottom: 30px;
+    transition: transform 1.0s ease;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.dex1-pass p {
+    padding-right: 6rem;
+    margin-bottom: 30px;
+    font-size: 3vmin;
+    transition: transform 1.0s ease;
+}
+
+/*grid-wrapper 源码*/
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    grid-gap: 2em;
+    padding: 2rem;
+}
+.grid-wrapper img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+.dex1 .dex1-leftPic{
+    margin-top: 90px;
+    transition: transform 0.6s ease;
+}
+.dex1-leftPic:hover{
+    transform: scale(1.1) rotate(-30deg);
+}
+@keyframes scaleup {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes run {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        position: var(100px);
+    }
+
+    100% {
+        transform: scale(1);
+        position: var(-100px);
+    }
+}
+.circle img {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 750px;
+    z-index: -1;
+    animation: scaleup 4.9s ease-in-out infinite;
+}
+.ctr{
+    padding: 3rem;
+    display: flex;
+}
+.dex2{
+    padding-top: 150px;
+}
+.ctr2{
+    display: flex;
+    padding: 20px;
+}
+.dex2-left{
+    padding-top: 7%;
+    width: 50%;
+    margin: 8px;
+    
+}
+.dex2-left h1{
+    font-size: 6vmin;
+    color: seagreen;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    transition: 0.6s;
+    z-index: 9!important;
+}
+.dex2-left p{
+    font-size: 3vmin;
+    margin-right: 20%;
+    transition: 0.95s;
+}
+.dex2-right{
+    width: 50%;
+    margin: 8px;
+}
+.dex2-left h1:hover {
+    transform: scale(1.05) translate3d(30px,-20px,0px);
+    cursor: default;
+}
+.dex2-divline{
+    height: 6px;
+    margin-top: 20px;
+    margin-right: 50px;
+    background-color: rgb(0, 176, 91);
+    margin-bottom: 16px;
+    transition: 0.9s;
+}
+.dex2-divline:hover{
+    transform: scale(1.2);
+}
+.dex2-left p:hover {
+    transform: scale(1.1) translate3d(20px, 30px, 0px);
+    cursor: default;
+}
+.circle2 img {
+    padding-top: 123%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 510px;
+    z-index: -1;
+    animation: scaleup 4.9s ease-in-out infinite;
+}
+.dex2-right img{
+    z-index: 8;
+    width: 90%;
+    transition: 1.3s;
+    margin: 20px;
+}
+.dex2-right img:hover{
+    transform: scale(1.1);
+}
+.sec-t{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3vmin;
+    color: rgb(14, 104, 74);
+}
+.dex3 {
+    position: relative;
+    padding: 30px;
+}
+
+.dex3 .ctr3 {
+    display: flex;
+}
+
+.dex3 .dex3-left {
+    width: 50%;
+}
+
+.dex3 .dex3-left .road {
+    margin-left: 185px;
+    width: 50%;
+    margin-top: 70px;
+}
+
+.dex3 .dex3-left .car {
+    top: 0;
+    margin-top: 70px;
+    left: 245px;
+    position: absolute;
+    width: 10%;
+}
+.dex3 .dex3-pic1{
+    margin-left: 710px;
+    margin-top: -600px!important;
+    opacity: 0.3;
+}
+
+
+
+.dex3 .dex3-pic2  {
+    top: 120px;
+    left: 320px;
+    position: absolute;
+    width: 10%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+
+.dex3 .dex3-left .dex3-pic2 {
+    top: 20px;
+    left: 90px;
+    position: absolute;
+    width: 40%;
+}
+
+.dex3 .dex3-right {
+    width: 60%;
+}
+
+.dex3 .dex3-right .pace {
+    margin-top: 30px;
+    margin-left: -100px;
+    position: absolute;
+    width: 100%;
+}
+.pace{
+    margin-top: 30px;
+    margin-left: -170px;
+    position: absolute;
+    width: 100%;
+}
+
+.dex3 .bottom {
+    width: 100%;
+    z-index: -1;
+}
+
+.dex3 .bottom img {
+    margin-left: 610px;
+    width: 30%;
+    margin-top:-90px ;
+}
+
+.txt1 {
+    position: absolute;
+    top: 120px;
+    left: 100px;
+    transition: 0.8s;
+}
+
+.txt1 p {
+    font-size: 26px !important;
+    transition: 0.8s;
+    font-weight: 700;
+    color: rgba(46, 137, 72, 0.491);
+}
+
+.txt1 .txt1-1 {
+    text-indent: 5em;
+    transition: 0.8s;
+}
+
+.txt2 {
+    position: absolute;
+    top: 550px;
+    left: 250px;
+    color: rgba(46, 137, 72, 0.491);
+    transition: 0.8s;
+}
+
+.txt2 p {
+    font-size: 26px !important;
+    font-weight: 700;
+    transition: 0.8s;
+}
+.txt1 .txt1-1:hover{
+    scale: 1.2;
+}
+.txt1 p:hover{
+    scale: 1.1;
+    color: rgb(24, 97, 29);
+}
+.txt2 p:hover{
+    scale: 1.1;
+    color: rgb(24, 97, 29);
+}
+
+/*cwb part*/
+/* 导航栏模块开始 */
+.navbar-hz {
+    position: fixed;
+    width: 100%;
+}
+
+.navbar {
+    background-color: rgba(158, 214, 47, 0.653);
+    padding: 0;
+    backdrop-filter: blur(8px)!important;
+ 
+
+}
+
+/* logo部分开始 */
+.logo {
+    width: 70px;
+    height: 70px;
+}
+
+.collapse {
+    justify-content: end;
+}
+
+/* logo部分结束 */
+/* 导航标签前端小图标开始 */
+.navbar-hz{
+    z-index: 99;
+}
+.navbar-nav {
+    margin-right: 10px !important;
+}
+
+.navbar-nav .m {
+    margin-right: 80px;
+    padding-bottom: 0px;
+}
+
+.ims {
+    width: 50px;
+    float: left;
+}
+
+.nav-item .ims {
+    transition: 0.5s;
+}
+
+.nav-item:hover .ims {
+    content: url("../img/icon2.png");
+}
+
+.nav-item-li {
+    display: inline-block;
+    padding: 0 !important;
+}
+
+.nav-item-li .nav-link {
+    line-height: 50px;
+}
+
+.nav-link {
+    padding-left: 0 !important;
+}
+
+.dropdown:hover .dropdown-menu {
+    color: rgb(23, 91, 16);
+}
+
+.dropdown-menu {
+    background: rgb(154, 205, 50,0.75);
+        backdrop-filter: blur(14px)!important;
+
+    padding: 3px;
+}
+
+.dropdown-item {
+    transition: 0.2s;
+}
+
+.dropdown-item:hover {
+    color: rgb(94, 194, 74);
+    background-color: green;
+}
+
+/* 以下为标签悬浮下划线动画 */
+.nav-item {
+    position: relative;
+    font-size: 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.nav-item:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 3px;
+    border-radius: 2px;
+    background: #4285f4;
+    transition: all .3s;
+}
+
+.nav-item:hover:before {
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+/* 下滑想动画结束 */
+/* 导航栏标签前端小标签结束 */
+/* 导航栏模块结束 */
+
+
+/* 头图部分开始 */
+.section0 img {
+    width: 100%;
+}
+
+/* 头图部分结束 */
+
+
+/* 垃圾占位 */
+.zhanwei {
+    width: 100%;
+}
+
+.laji {
+    width: 800px;
+    height: 1500px;
+    background: pink;
+    margin: auto;
+}
+
+/* Scroll to the top btn  */
+#scrolltp {
+    display: block;
+    color: white;
+    background: tomato;
+    padding: 15px;
+    border-radius: 50%;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    cursor: pointer;
+    transition: opacity 0.5s;
+    z-index: 10;
+}
+
+/* Footer开始*/
+.footer {
+    background: green;
+    position: relative;
+    padding: 50px 30px 0 30px;
+    
+}
+
+/* evolution部分开始 */
+.evolution {
+    font-size: 100px;
+    top: -60px;
+    left: 30px;
+    background-clip: text;
+    background-image: linear-gradient(to top, rgb(237, 243, 235) 50%, rgb(37, 80, 42) 50%)!important;
+    position: absolute;
+    color: transparent;
+    z-index: 0;
+}
+
+/* evolution部分结束 */
+.grid-wrapper {
+    display: grid;
+    /* 这一句用的是220px是因为有5列，四行文字220px，剩下的就正好剩四百左右px给logo使用 ，如果用250px的话，为logo剩下的空间不够大，会导致logo过小*/
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    grid-gap: 2em;
+}
+
+.grid-logo {
+    display: grid;
+    /* background: #000; */
+    height: 400px;
+    grid-template-columns: repeat(3, auto);
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+
+.footlogo {
+    width: 100%;
+}
+
+.grid-wrapper h1 {
+    font-size: 28px;
+    padding-bottom: 12px;
+}
+
+.grid-wrapper h1 a {
+    color: white;
+    transition: 0.6s;
+}
+
+.grid-wrapper h1 a:hover {
+    color: gold;
+}
+
+.footer hr {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-around;
+    color: grey;
+    padding: 30px;
+    font-weight: 700;
+}
+
+/* footer部分结束 */
+
+/* Scroll to the top btn  */
+.icon-arrow-up {
+    color: white;
+    background: tomato;
+    padding: 15px;
+    border-radius: 50%;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    cursor: pointer;
+    transition: opacity 0.5s;
+}
+
+.scrolltp-hz .icon-arrow-up {
+    transition: 0.5s !important;
+}
+
+.scrolltp-hz .icon-arrow-up:hover {
+    transform: scale(1.3);
+}
