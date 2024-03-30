@@ -20,6 +20,7 @@
 </head>
 
 <body ng-controller="testCtrl">
+    
     <!--预加载页面脚本-->
     <script>
         window.addEventListener('load', function () {
@@ -92,48 +93,40 @@
         </nav>
     </main>
     <!-- 头图 -->
-
     </section>
-    <!-- 以下为notebook部分 -->
-    <!-- 以下为notebook部分 -->
-    <!-- 以下为notebook部分 -->
-    <!-- 以下为notebook部分 -->
-    <!-- 以下为notebook部分 -->
-    <!-- 以下为notebook部分 -->
-    <!-- 以下为notebook部分 -->
-    <!-- 以下为notebook部分 -->
-    <!-- 以下为notebook部分 -->
     <div class="empty"></div>
+ 
+
     <section class="notebook-hz" id="boxsec">
         <!-- 左侧导航部分 -->
         <div class="jul">
             <p class="cbp">JUL.</p>
             <ul class="week-ul">
-                <li class="jul-1 jul-week week"> <a href="#" onclick="loadDocument('./weekly/jul1.html')">week1</a></li>
-                <li class="jul-1 jul-week week"> <a href="#" onclick="loadDocument('./weekly/jul2.html')">week2</a></li>
-                <li class="jul-1 jul-week week"> <a href="#" onclick="loadDocument('./weekly/jul3.html')">week3</a></li>
-                <li class="jul-1 jul-week week"> <a href="#" onclick="loadDocument('./weekly/jul4.html')">week4</a></li>
-                <li class="jul-1 jul-week week"> <a href="#" onclick="loadDocument('./weekly/jul5.html')">week5</a></li>
+                <li class="jul-1 jul-week week"> <a href="#" onclick="loadDocument('./weekly/jul1')">week1</a></li>
+                <li class="jul-1 jul-week week"> <a href="#" onclick="loadDocument('./weekly/jul2')">week2</a></li>
+                <li class="jul-1 jul-week week"> <a href="#" onclick="loadDocument('./weekly/jul3')">week3</a></li>
+                <li class="jul-1 jul-week week"> <a href="#" onclick="loadDocument('./weekly/jul4')">week4</a></li>
+                <li class="jul-1 jul-week week"> <a href="#" onclick="loadDocument('./weekly/jul5')">week5</a></li>
 
             </ul>
         </div>
         <div class="aug">
             <p class="cbp">AUG.</p>
             <ul class="week-ul">
-                <li class="aug-1 aug-week week"><a href="#" onclick="loadDocument('./weekly/aug1.html')">week1</a></li>
-                <li class="aug-1 aug-week week"><a href="#" onclick="loadDocument('./weekly/aug2.html')">week2</a></li>
-                <li class="aug-1 aug-week week"><a href="#" onclick="loadDocument('./weekly/aug3.html')">week3</a></li>
-                <li class="aug-1 aug-week week"><a href="#" onclick="loadDocument('./weekly/aug4.html')">week4</a></li>
-                <li class="aug-1 aug-week week"><a href="#" onclick="loadDocument('./weekly/aug5.html')">week5</a></li>
+                <li class="aug-1 aug-week week"><a href="#" onclick="loadDocument('./weekly/aug1')">week1</a></li>
+                <li class="aug-1 aug-week week"><a href="#" onclick="loadDocument('./weekly/aug2')">week2</a></li>
+                <li class="aug-1 aug-week week"><a href="#" onclick="loadDocument('./weekly/aug3')">week3</a></li>
+                <li class="aug-1 aug-week week"><a href="#" onclick="loadDocument('./weekly/aug4')">week4</a></li>
+                <li class="aug-1 aug-week week"><a href="#" onclick="loadDocument('./weekly/aug5')">week5</a></li>
             </ul>
         </div>
         <div class="sep">
             <p class="cbp">SEP.</p>
             <ul class="week-ul">
-                <li class="sep-1 sep-week week"><a href="#" onclick="loadDocument('./weekly/sep1.html')">week1</a></li>
-                <li class="sep-1 sep-week week"><a href="#" onclick="loadDocument('./weekly/sep2.html')">week2</a></li>
-                <li class="sep-1 sep-week week"><a href="#" onclick="loadDocument('./weekly/sep3.html')">week3</a></li>
-                <li class="sep-1 sep-week week"><a href="#" onclick="loadDocument('./weekly/sep4.html')">week4</a></li>
+                <li class="sep-1 sep-week week"><a href="#" onclick="loadDocument('./weekly/sep1')">week1</a></li>
+                <li class="sep-1 sep-week week"><a href="#" onclick="loadDocument('./weekly/sep2')">week2</a></li>
+                <li class="sep-1 sep-week week"><a href="#" onclick="loadDocument('./weekly/sep3')">week3</a></li>
+                <li class="sep-1 sep-week week"><a href="#" onclick="loadDocument('./weekly/sep4')">week4</a></li>
             </ul>
         </div>
 
@@ -142,7 +135,7 @@
             <!-- 单选按钮 -->
             <div class="danxuan">
                 <div class="duanxuan-div">
-                    <input type="radio" id="wet" name="lab" value="wet" checked />
+                    <input type="radio" id="wet" name="lab" value="wet"  />
                     <label class="lablab" for="wet">WET LAB</label>
                 </div>
                 <div>
@@ -174,15 +167,7 @@
             </div>
         </div>
     </section>
-    <!-- 以上为notebook部分 -->
-    <!-- 以上为notebook部分 -->
-    <!-- 以上为notebook部分 -->
-    <!-- 以上为notebook部分 -->
-    <!-- 以上为notebook部分 -->
-    <!-- 以上为notebook部分 -->
-    <!-- 以上为notebook部分 -->
-    <!-- 以上为notebook部分 -->
-    <!-- 以上为notebook部分 -->
+
     <!-- Footer  -->
     <section class="footer">
         <h1 class="evolution">Evolution</h1>
@@ -224,21 +209,101 @@
     <script src="../js/projects.js"></script>
     <script>
         function loadDocument(filename) {
-            fetch(filename)
+            console.log('当前正在加载文件 ' + filename);
+            fetch(filename + status)
                 .then(response => response.text())
                 .then(text => {
-                    document.getElementById('boxsec').innerHTML =(text);
+                    document.getElementById('boxsec').innerHTML = text;
+                    // 在加载完新内容后重新绑定复选框的事件处理程序
+                    bindCheckboxEvents();
                 })
                 .catch(error => console.error('Error loading Markdown file:', error));
         }
+        
+        function bindCheckboxEvents() {
+            var wetCheckbox = document.getElementById('wet');
+            var dryCheckbox = document.getElementById('dry');
+        
+            wetCheckbox.addEventListener('change', function() {
+                console.log('Checkbox wet changed, saving state...');
+                saveCheckboxState('wet');
+                status = wetCheckbox.checked ? ".html" : status;
+                dryCheckbox.checked = !wetCheckbox.checked;
+                saveCheckboxState('dry');
+                loadDocument('./weekly/jul1');
+            });
+        
+            dryCheckbox.addEventListener('change', function() {
+                console.log('Checkbox dry changed, saving state...');
+                saveCheckboxState('dry');
+                status = dryCheckbox.checked ? "dl.html" : status;
+                wetCheckbox.checked = !dryCheckbox.checked;
+                saveCheckboxState('wet');
+                loadDocument('./weekly/jul1');
+            });
+        }
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('Document loaded, restoring checkbox states...');
+            restoreCheckboxState('wet');
+            restoreCheckboxState('dry');
+            bindCheckboxEvents();
+        });
+        
     </script>
     <script src="../js/marked.js"></script>
     <script>
- 
+        
+        var status = ".html"; // 默认值
+
+        function saveCheckboxState(checkboxId) {
+            var checkbox = document.getElementById(checkboxId);
+            localStorage.setItem('checkbox_' + checkboxId, checkbox.checked);
+            console.log('Checkbox ' + checkboxId + ' saved state: ' + checkbox.checked);
+        }
+
+        function restoreCheckboxState(checkboxId) {
+            var checkbox = document.getElementById(checkboxId);
+            var isChecked = localStorage.getItem('checkbox_' + checkboxId);
+            if (isChecked !== null) {
+                checkbox.checked = isChecked === 'true';
+                console.log('Checkbox ' + checkboxId + ' restored state to: ' + isChecked);
+            } else {
+                checkbox.checked = false; // 默认为未选中状态
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('Document loaded, restoring checkbox states...');
+            restoreCheckboxState('wet');
+            restoreCheckboxState('dry');
+
+            var wetCheckbox = document.getElementById('wet');
+            var dryCheckbox = document.getElementById('dry');
+
+            wetCheckbox.addEventListener('change', function() {
+                console.log('Checkbox wet changed, saving state...');
+                saveCheckboxState('wet');
+                status = wetCheckbox.checked ? ".html" : status; // 根据 wet 复选框状态更新 status 变量
+                dryCheckbox.checked = !wetCheckbox.checked; // 取消 dry 复选框的选中状态
+                saveCheckboxState('dry'); // 保存 dry 复选框状态
+                location.reload(); // 重新加载页面
+            });
+
+            dryCheckbox.addEventListener('change', function() {
+                console.log('Checkbox dry changed, saving state...');
+                saveCheckboxState('dry');
+                status = dryCheckbox.checked ? "dl.html" : status; // 根据 dry 复选框状态更新 status 变量
+                wetCheckbox.checked = !dryCheckbox.checked; // 取消 wet 复选框的选中状态
+                saveCheckboxState('wet'); // 保存 wet 复选框状态
+                location.reload(); // 重新加载页面
+            });
+        });
+    </script>
 
         
-        
-    </script>
+    <a href="../zhenhuo/image.png" id="zhh">zhenhuo</a>
+    
 </body>
 
 </html>
