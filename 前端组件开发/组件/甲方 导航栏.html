@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>山羊の前端小窝</title>
+    <link rel="stylesheet" href="./css/甲方 导航栏.css">
+</head>
+
+<body>
+    <section class="navbar" id="nav">
+        <div class="nav-container">
+            <li class="slide1"></li>
+            <li class="slide2"></li>
+            <li class="dropdown-menu"><a href="#">Home</a></li>
+            <li class="dropdown-menu"><a href="#">Team</a></li>
+            <li class="dropdown-menu"><a href="#">Project</a></li>
+            <li class="dropdown-menu"><a href="#">Document</a></li>
+        </div>
+
+
+    </section>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $("#nav a").on("click", function () {
+        var position = $(this).parent().position();
+        var width = $(this).parent().width();
+        $("#nav .slide1").css({ opacity: 1, left: +position.left, width: width });
+    });
+    $("#nav a").on("mouseover", function () {
+        var position = $(this).parent().position();
+        var width = $(this).parent().width();
+        $("#nav .slide2").css({ opacity: 1, left: +position.left, width: width }).addClass("squeeze");
+    });
+    $("#nav a").on("mouseout", function () {
+        $("#nav .slide2").css({ opacity: 0 }).removeClass("squeeze");
+    });
+    var currentWidth = $("#nav li:nth-of-type(3) a").parent("li").width();
+    var current = $("li:nth-of-type(3) a").position();
+    $("#nav .slide1").css({ left: +current.left, width: currentWidth });
+</script>
+
+</html>

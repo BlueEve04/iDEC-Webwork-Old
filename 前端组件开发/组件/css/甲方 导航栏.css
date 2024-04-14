@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 999999;
+    /* 背景透明加渐变色效果 */
+    background: linear-gradient(135deg, rgba(225, 245, 251, 0.5), rgba(0, 238, 255, 0.5));
+    /* 背景模糊效果 */
+    backdrop-filter: blur(2px);
+}
+.dropdown-menu {
+    line-height: 70px;
+        display: inline-block;
+    justify-content: flex-end;
+    flex-direction: row;
+    font-size: 18px;
+    color: black !important;
+    font-weight: 600;
+    height: 70px;
+}
+#nav .dropdown-menu a {
+    position: relative;
+    font: 500 20px;
+    color: rgb(70, 100, 180);
+    text-decoration: none;
+    z-index: 3;
+    margin: 0 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.slide1,
+.slide2 {
+    position: absolute;
+    display: inline-block;
+    height: 60px;
+    border-radius: 10em;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1.05);
+}
+
+.slide1 {
+    background-color: rgb(170, 190, 255);
+    z-index: 2;
+}
+
+.slide2 {
+    opacity: 0;
+    background-color: rgba(170, 190, 255, .5);
+    z-index: 1;
+    box-shadow: 0 0 20px #ffffffaa inset;
+}
+
+.squeeze {
+    transform: scale(0.9);
+}
