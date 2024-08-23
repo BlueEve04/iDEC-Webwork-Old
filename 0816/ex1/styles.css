@@ -1,0 +1,72 @@
+body {
+    overflow: hidden;  /* 禁止页面滚动 */
+        /* 固定页面高度 */
+    margin: 0;
+}
+
+.scroll-container {
+    overflow-x: auto;  /* 允许横向滚动 */
+    white-space: nowrap;  /* 保持内容不换行 */
+    padding: 20px;
+    height: 1000px;
+    width: auto;
+    scroll-behavior: smooth;
+    padding-top: 120px;
+    padding-bottom:100px;
+    box-sizing: border-box;  /* 包含padding */
+    width: 100%; /* 确保容器宽度合适 */
+    position: fixed;  /* 固定容器位置 */
+    left: 0;
+    right: 0;
+}
+.cardctr{
+    position: relative;
+    align-items: center;
+    width: 300px;   /* 固定卡片宽度 */
+    height: 580px;  /* 固定卡片高度 */
+    display:inline;
+    transition: transform 0.5 ease;
+    display: inline-block; 
+}
+.avatar{
+    z-index: 99999999;
+    height: 100px;
+    transition: all 0.6s ease-in-out;
+    width: 100px; 
+}
+.card {
+    width: 300px;   /* 固定卡片宽度 */
+    height: 450px;  /* 固定卡片高度 */
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    margin: 0 10px; /* 卡片之间的间距 */
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out; /* 平滑过渡所有变化 */
+    /* 保持卡片大小不变 */
+    vertical-align: top;  /* 保持卡片在容器内的对齐 */
+    position: absolute; /* 基本定位 */
+    overflow: hidden;
+}
+
+.card h1 {
+    margin: 0;
+    font-size: 24px;
+    transition: font-size 0.3s ease-in-out;
+}
+.cardctr:hover img{ 
+    z-index: 10000000;
+    transform: translateX(100px);
+}
+.cardctr:hover .card{
+    width: 600px; /* 放大宽度 */
+    height: 600px; /* 放大高度 */
+    background-color: rgb(94, 206, 92);
+    transform: translateY(-100px),translateX(1000px);
+    /* 浮动在其他卡片之上 */
+    z-index: 10; /* 提升层级，确保在其他卡片之上 */
+}
+
+.cardctr:hover h1 {
+    font-size: 36px; /* 调整字体大小以适应放大的卡片 */
+}

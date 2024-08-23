@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .ball {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            position: absolute;
+            /* 设置初始位置 */
+            top: 10px;
+            left: 10px;
+            background: red;
+        }
+
+        .top_right {
+            /* 同时设置两个动画 */
+            animation: to-right 3s 0.4s infinite linear,
+                to-down 3s 0.4s infinite cubic-bezier(0.15, 0.76, 0.25, 0.86);
+            animation-fill-mode: forwards;
+        }
+
+        /* 向上运动 */
+        @keyframes to-down {
+            0% {
+                top: 0px;
+            }
+
+            100% {
+                top: 300px;
+                background-color: rgb(240, 240, 158);
+            }
+        }
+
+        /* 向右运动 */
+        @keyframes to-right {
+            0% {
+                left: 10px;
+                transform: scale(0.7);
+            }
+
+            100% {
+                left: 300px;
+                /* 小球缩小为0.3倍 */
+                transform: scale(0.3);
+                /* 小球的背景变为黄色 */
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ball top_right color"></div>
+</body>
+
+</html>
