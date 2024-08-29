@@ -1,0 +1,268 @@
+/* 为navbar-hz添加z-index，防止section0的相对定位遮住 */
+.navbar-hz {
+    z-index: 999;
+}
+
+.section0 {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.description1 {
+    position: absolute;
+    top: 40%;
+    z-index: 1;
+}
+
+/* 侧边导航栏 */
+.cbnav {
+    width: 180px;
+    height: 480px;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: fixed;
+    font-size: 16px;
+    left: -180px;
+    top: 25%;
+    border-radius: 0 12px 12px 0;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 999;
+}
+
+.cb1,
+
+.cb6 {
+    line-height: 80px;
+}
+
+.cb5 {
+    line-height: 20px;
+}
+
+.cb3,
+.cb2 {
+    line-height: 27px;
+}
+
+.cb4 {
+    line-height: 40px;
+}
+
+.cbnav li {
+    width: 180px;
+    height: 80px;
+
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.cbnav li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.cbnav a {
+    color: rgb(0, 0, 0);
+    display: block;
+    text-decoration: none;
+}
+
+.cb {
+    font-family: 'icomoon';
+}
+
+#cb {
+    display: none;
+}
+
+#cb:checked~.cbnav {
+    left: 0px;
+}
+
+#cb:checked~.label {
+    left: 180px;
+}
+
+.icon-menu {
+    color: orange;
+}
+
+label {
+    width: 15px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 0 4px 4px 0;
+    display: inline-block;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    line-height: 60px;
+    position: fixed;
+    left: 0px;
+    top: 40%;
+    transition: 0.5s;
+    opacity: 0.8;
+    z-index: 999;
+}
+
+/* 锚点定位 */
+.Anchor-point {
+    position: absolute;
+    /*控制距离顶部 100px*/
+    top: -100px;
+    visibility: hidden;
+}
+
+/* 论文主体 */
+.paper {
+    margin-bottom: 50px;
+    width: 80%;
+    margin-left: 15%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.467);
+    border-radius: 20px;
+    background-color: rgb(156, 207, 156);
+    padding: 50px;
+}
+
+.paper h2 {
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+.paper h3 {
+    text-align: center;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+.paper h5 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.paper p {
+    text-indent: 2em;
+    font-size: 24px;
+}
+
+.paper em {
+    font-style: italic;
+}
+
+.paper-biaoti {
+
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+
+.paper-content .paper-biaoti,
+.paper-content h2 {
+    text-align: center;
+    position: relative;
+}
+
+/* 论文主体里面的图片部分 */
+.paper-img1,
+.paper-img2,
+.paper-img3,
+.paper-img4,
+.paper-img5,
+.paper-img6,
+.paper-img7,
+.paper-img8,
+.paper-img9,
+.paper-img10,
+.paper-img11,
+.paper-img12,
+.paper-img13 {
+
+    margin: auto;
+    width: 65%;
+}
+
+.paper-img1,
+.paper-img3,
+.paper-img4,
+.paper-img6,
+.paper-img7,
+.paper-img8,
+.paper-img9,
+.paper-img10,
+.paper-img11,
+.paper-img12,
+.paper-img13 {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.paper-img1 img,
+.paper-img2 img,
+.paper-img3 img,
+.paper-img4 img,
+.paper-img5 img,
+.paper-img6 img,
+.paper-img7 img,
+.paper-img8 img,
+.paper-img9 img,
+.paper-img10 img,
+.paper-img11 img,
+.paper-img12 img,
+.paper-img13 img {
+    width: 100%;
+}
+
+/* 论文主体的文献部分 */
+.reference p {
+    text-indent: 0;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+/* 论文主体表格部分 */
+/* .paper .table1,
+.paper .table2,
+.paper .table3 {
+    width: 40%;
+    height: 100px;
+    border: black 2px solid;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+} */
+
+.table1,
+.table2,
+.table3 {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    table {
+        margin: auto;
+    }
+    table>caption {
+            margin: 0 0 5px 0;
+        }
+    
+        table>thead>tr>th {
+            border-top: 2px solid #000;
+            border-bottom: 1px solid #000;
+        }
+    
+        table>tbody>tr:last-child>td {
+            border-bottom: 2px solid #000;
+        }
+    
+        table>thead>tr>th {
+            padding: 6px 20px;
+            text-align: center;
+        }
+    
+        table>tbody>tr>td {
+            padding: 6px 20px;
+            text-align: center;
+        }
+}
+
+#result_cb {
+    transition: 0.4s;
+}

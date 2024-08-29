@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页组复现代码</title>
+    <!-- 引用bootstrap5.css文件 -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- 引用style.css文件 -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 引用base.css 文件 -->
+    <link rel="stylesheet" href="css/base.css">
+    <!-- 引用icomoon font文件 -->
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/preload.css">
+    <!-- AOS -->
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+        <!--以下是预加载显示页面-->
+        <!--预加载页面脚本-->
+    <script>
+            window.addEventListener('load', function () {
+                var loader = document.getElementById('preload');
+
+                setTimeout(function () {
+                    loader.style.display = 'none';
+                }, 2000);
+            });
+    </script>
+
+    <div id="preload" class="preload">
+        <link rel="stylesheet" href="./css/preload.css">
+        <img src="./img/loader.gif" alt="Loading...">
+    </div>
+        <!--预加载div，使用单独的css避免冲突-->
+    <!-- 本main模块为bootstrap5导航栏模块 -->
+    <main class="navbar-hz">
+        <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Eighth navbar example">
+            <div class="container">
+                <!-- a标签为大logo -->
+                <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="" class="logo"></a>
+                <!-- button为缩小页面后的button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsExample07">
+                    <!-- ul为小标签的盒子 -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <div class="nav-item m">
+                            <a href="index.html"><img src="img/icon1.png" alt="" class="ims"></a>
+                            <li class="nav-item-li">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                        </div>
+                        <div class="nav-item m">
+                            <a href="./pages/projects.html"><img src="img/icon1.png" alt="" class="ims"></a>
+                            <li class="nav-item-li dropdown">
+                                <a class="nav-link dropdown-toggle" href="" data-bs-toggle="dropdown">Project</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="./pages/projects.html">Discription</a></li>
+                                    <li><a class="dropdown-item" href="./pages/design.html">design</a></li>
+                                    <li><a class="dropdown-item" href="./pages/result.html">result</a></li>
+                                    <li><a class="dropdown-item" href="./pages/projects.html">supplement</a></li>
+                                    <li><a class="dropdown-item" href="./pages/projects.html">Procool</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                        <div class="nav-item m">
+                            <img src="img/icon1.png" alt="" class="ims">
+                            <li class="nav-item-li">
+                                <a class="nav-link active" aria-current="page" href="./pages/lab notebook.html">Lab Notebook</a>
+                            </li>
+                        </div>
+                        <div class="nav-item">
+                            <img src="img/icon1.png" alt="" class="ims">
+                            <li class="nav-item-li dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                    aria-expanded="false">Team</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="./pages/team.html">Team</a></li>
+                                    <li><a class="dropdown-item" href="./pages/col.html">collabtion</a></li>
+                                </ul>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </main>
+    <!-- 头图 -->
+    <section class="section0">
+        <img src="img/head.jpg" alt="">
+    </section>
+    <!--Liquiritigenin introduction 的部分-->
+    <section class="dex1" data-aos="fade-right" data-aos-duration="1200">
+        <!--放下第一个介绍部分的盒子-->
+        <div class="ctr">
+            <!--由gridwrapper控制样式的衬图-->
+            <div class="grid-wrapper">
+                <div>
+                    <img src="./img/section2.png" alt="" class="dex1-leftPic">
+                </div>
+            </div>
+            <!--第一个介绍的文字-->
+            <div class="dex1-pass" data-aos="fade-up" data-aos-duration="1200" data-aos-offset="0">
+                <!--第一部分的文字介绍衬底-->
+                <div class="circle">
+                    <img src="./img/circle.svg" alt="">
+                </div>
+                <!--Documents-->
+                <h1>Liquiritigenin introduction</h1>
+                <p>Liquiritigenin is one of the main bioactive components extracted from licorice. </p>
+                <p>Because of the high-value pharmacological activities, it serves as an intermediate for the synthesis
+                    of drugs with anti-diabetic, anti-tuberculosis and other properties, offering significant potential
+                    and vast application prospects in the healthcare field.</p>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <section class="dex2">
+        <div class="ctr2">
+            <div class="dex2-left" data-aos="fade-up-left" data-aos-duration="1200">
+                <h1 class="dex2-t">Two targets and two pathways</h1>
+                <div class="dex2-divline"></div>
+                <p>We selected allosteric transcription repressor factor FdeR and a riboswitch that identify naringenin
+                    as starting points, and used error-prone PCR, site-directed mutation, and phage-assisted continuous
+                    evolution (PACE) strategies enabling them to specifically recognize naringenin.</p>
+            </div>
+            <div class="circle2">
+                <img src="./img/circle.svg" alt="">
+            </div>
+            <div class="dex2-right" data-aos="zoom-in">
+
+                <img src="./img/section4-1.png" alt="">
+                <p class="sec-t">Transcription Factor</p>
+                <img src="./img/section4-2.png" alt="">
+                <p class="sec-t">Riboswitch</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="dex3" data-aos="flip-left">
+        <div class="ctr3">
+            <div class="dex3-left" data-aos="zoom-in">
+                <img src="./img/road.png" alt="" class="road">
+                <img src="./img/car.png" alt="" class="car">
+                <div class="txt1">
+                    <p>error-prone PCR</p>
+                    <p class="txt1-1">&</p>
+                    <p>site-directed mutagenesis</p>
+                </div>
+                <img src="./img/people1.png" alt="" class="dex3-pic1">
+                <img src="./img/people.png" alt="" class="dex3-pic2">
+                <div class="txt2">
+                    <p>Fluorescence activated Cell Sorting</p>
+                </div>
+            </div>
+            <div class="dex3-right" data-aos="zoom-in">
+                <img src="./img/circle.png" alt="" class="pace">
+            </div>
+        </div>
+        <div class="bottom">
+            <img src="./img/box.png" alt="">
+        </div>
+    </section>
+
+    <!-- AOS -->
+    <script src="./js/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            delay: 100,
+            duration: 2000,
+        });
+        //css样式选择器
+        //不需要了，已经单独设置
+    </script>
+    <!-- 小车运动 -->
+    <script>
+        window.addEventListener('scroll', function () {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            var car = document.querySelector(".car")
+            var andLevel = 30; //初始与水平方向夹角为30度
+            var top = 0;
+            var left = 0;
+            var rotation = 0;
+            console.log(scrollTop);
+            // 在特定的滚动位置进行旋转
+            if (scrollTop <= 2050) {
+                rotation = 0;
+                car.style.top = scrollTop - 1875 + 'px';
+                top = car.style.top;
+                var angle = (rotation + andLevel) * (Math.PI / 180); // 将角度转换为弧度
+                car.style.left = ((1 - Math.sin(angle)) * parseInt(top)) + (scrollTop - 1670) + 'px';
+                left = car.style.left;
+            } else if (scrollTop > 2050 && scrollTop <= 2178) {
+                car.style.top = scrollTop - 1875 + 'px';
+                rotation = (scrollTop - 2050) / 200 * 180; // 根据滚动位置计算旋转角度
+                car.style.transform = 'rotate(' + rotation + 'deg)';
+                var angle = (rotation + andLevel) * (Math.PI / 180); // 将角度转换为弧
+                if (scrollTop <= 2100) {
+                    car.style.left = (Math.sin(angle) * parseInt(top)) + (scrollTop - 1700) + 110 + 'px';
+                } else if (scrollTop >= 2100 && scrollTop <= 2181) {
+                    car.style.left = 475 + 30 - (Math.sin(angle) * parseInt(top)) + 'px';
+                }
+            } else if (scrollTop > 2178 && scrollTop <= 2400) {
+                rotation = 115.89;
+                var angle = (rotation + andLevel) * (Math.PI / 180); // 将角度转换为弧
+                car.style.transform = 'rotate(' + rotation + 'deg)';
+                car.style.top = scrollTop - 1875 + 'px';
+                top = car.style.top;
+                car.style.left = ((1 - Math.sin(angle - Math.PI / 3)) * parseInt(top)) + (2650 - scrollTop * 1.4) + 550 + 356 + 'px';
+            } else if (scrollTop > 2400 && scrollTop <= 2520) {
+                car.style.top = scrollTop - 1875 + 'px';
+                rotation = 115.89 - (scrollTop - 2400) / 200 * 180; // 根据滚动位置计算旋转角度
+                car.style.transform = 'rotate(' + rotation + 'deg)';
+
+            } else if (scrollTop > 2520 && scrollTop <= 2758) {
+                car.style.top = scrollTop - 1875 + 'px';
+                rotation = 190.901;
+                var angle = (rotation + andLevel) * (Math.PI / 180); // 将角度转换为弧
+                car.style.transform = 'rotate(' + rotation + 'deg)';
+                car.style.left = ((1 - Math.sin(angle)) * parseInt(top)) + (scrollTop - 2520) + 200 + 'px';
+            }
+        });
+    </script>
+
+
+    <!-- Scroll to the topA按钮模块  -->
+    <section class="scrolltp-hz">
+        <span id="scrolltp" class="icon-arrow-up"></span>
+    </section>
+
+    <!-- 引用按钮回归效果js文件 -->
+    <script src="./js/projects.js"></script>
+    <!-- Footer  -->
+    <section class="footer">
+        <h1 class="evolution">Evolution</h1>
+        <div class="grid-wrapper">
+            <div class="grid-logo">
+                <img src="img/iDEC Logo2.png" alt="" class="footlogo">
+                <img src="img/NJAU.png" alt="" class="footlogo">
+                <img src="img/sky.png" alt="" class="footlogo">
+                <img src="img/诺1.png" alt="" class="footlogo">
+                <img src="img/NEB.png" alt="" class="footlogo">
+                <img src="img/genstar.png" alt="" class="footlogo">
+                <img src="img/ala.jpg" alt="" class="footlogo">
+            </div>
+            <!-- lianjie1-4为footer右侧四列 -->
+            <div class="lianjie1">
+                <h1><a href="">Home</a></h1>
+            </div>
+            <div class="lianjie2">
+                <h1><a href="">Project</a></h1>
+                <h1><a href="">Description</a></h1>
+                <h1><a href="">Design</a></h1>
+                <h1><a href="">Results</a></h1>
+                <h1><a href="">Supplement</a></h1>
+                <h1><a href="">Protocol</a></h1>
+            </div>
+            <div class="lianjie3">
+                <h1><a href="">Lab Notebook</a></h1>
+            </div>
+            <div class="lianjie4">
+                <h1><a href="">Team</a></h1>
+                <h1><a href="">Collaboration</a></h1>
+            </div>
+
+        </div>
+    </section>
+    <!-- 引入boots5js文件 -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- 引入project.js文件 -->
+    <script src="js/projects.js"></script>
+</body>
+
+</html>

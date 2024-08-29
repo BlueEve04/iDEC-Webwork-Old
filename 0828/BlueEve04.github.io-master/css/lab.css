@@ -1,0 +1,308 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?um6z7t');
+    src: url('../fonts/icomoon.eot?um6z7t#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?um6z7t') format('truetype'),
+        url('../fonts/icomoon.woff?um6z7t') format('woff'),
+        url('../fonts/icomoon.svg?um6z7t#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+hr {
+    width: 90%;
+    margin: auto;
+}
+
+/* 下面两行代码是必须的，让width起效果 */
+html {
+    height: 100%;
+    font-family: 'Kirang Haerang', cursive;
+}
+
+body {
+    height: 100%;
+
+}
+.empty{
+    width: 100%;
+    height: 100px;
+    background: #f6f6ba;
+}
+
+/* 右侧主体部分 */
+.notebook-hz {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #f6f6ba;
+    font-family: 'Kirang Haerang', cursive;
+}
+
+.jul,
+.aug,
+.sep {
+    right: calc(85% - 1.5vmin + 1px);
+    width: 70px;
+    height: 120px;
+    border-width: 1vmin 0 1vmin 1vmin;
+    border-color: green;
+    border-style: solid;
+    /* border-radius: 10px 0 0 10px; */
+    border-radius: 30% 0 0 30%;
+    /* display: inline-block; */
+    position: absolute;
+    transition: 0.5s;
+    cursor: pointer;
+    background: #f6f6ba;
+}
+
+.jul:hover,
+.aug:hover,
+.sep:hover {
+    width: 85px;
+    z-index: 9999999;
+}
+
+.jul:hover .cbp,
+.aug:hover .cbp,
+.sep:hover .cbp {
+    line-height: 80px;
+
+}
+
+.jul {
+    top: 10%;
+}
+
+.aug {
+    top: 26%;
+}
+
+.sep {
+    top: 42%;
+}
+
+.notebook {
+    right: 5%;
+    width: 80%;
+    border-radius: 20px;
+    border: 1.5vmin solid green;
+    /* display: inline-block; */
+    position: absolute;
+
+}
+
+/* 单选框部分 */
+.danxuan {
+    padding: 0px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 40px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.duanxuan-div {
+    flex-wrap: nowrap;
+    z-index: 99;
+}
+
+input[type="radio"] {
+    /*
+  display: none;这样会让tab键无法选取自定义的checkbox，所以使用下面的方法
+  clip 属性剪裁绝对定位元素。
+  */
+    position: absolute;
+    clip: rect(0, 0, 0, 0)
+}
+
+.lablab::before {
+    content: '\a0';
+    display: inline-block;
+    border: 3px solid silver;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    margin-right: 2vmin;
+    border-radius: 10px;
+}
+
+input[type="radio"]:checked+.lablab::before {
+    content: "\ea10";
+    color: #FA8E53;
+    font-size: 35px;
+    font-family: icomoon;
+}
+
+/* 标题和下载按钮 */
+.flood2 {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.notebook-biaoti {
+    font-size: 60px;
+}
+
+/* 论文下载按钮 */
+.download {
+    right: 15%;
+    position: absolute;
+    font-size: 2vw;
+    line-height: 50px;
+}
+
+.download .ctn-download {
+    z-index: 9;
+    position: absolute;
+    text-align: center;
+    color: antiquewhite;
+}
+
+.download a p {
+    text-indent: 0;
+    font-size: 2vw;
+}
+
+.download .icon-download2 {
+    display: block;
+}
+
+/* 两个小button */
+.wet-lab-btn,
+.dry-lab-btn {
+    margin-top: 20px;
+}
+
+.wet-lab-btn button,
+.dry-lab-btn button {
+    display: block;
+    margin: auto;
+    font-size: 40px;
+    margin-bottom: 80px;
+    background: none;
+
+}
+
+.cbp {
+    width: 65px;
+    height: 120px;
+    font-size: 30px;
+    margin-bottom: 0;
+    text-align: center;
+    line-height: 65px;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    transition: line-height 0.5s;
+}
+
+/* 下拉week选项部分 */
+
+.week-ul {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 19px;
+    top: 100%;
+}
+
+.jul:hover .week-ul,
+.aug:hover .week-ul,
+.sep:hover .week-ul {
+    z-index: 9999;
+}
+
+.jul:hover .week {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+}
+
+.aug:hover .week {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+.sep:hover .week {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+.jul-1,
+.aug-1,
+.sep-1 {
+    border-width: 2px !important;
+    border-top: 0 !important;
+}
+
+/* 设置部分week虚线边框 */
+.jul-2,
+.jul-3,
+.jul-4,
+.jul-1,
+.aug-2,
+.aug-3,
+.aug-4,
+.aug-1,
+.sep-2,
+.sep-3,
+.sep-1 {
+    border-bottom-style: dashed !important;
+}
+
+
+.week {
+    margin: auto;
+    width: 55px;
+    height: 80%;
+    border-width: 0 2px 2px 2px;
+    border-color: green;
+    border-style: solid;
+    /* display: none; */
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.6s;
+    line-height: 50px;
+    text-align: center;
+    background: #f6f6ba;
+    font-size: 20px;
+}
+
+
+/* 一下为导航+头图+footer */
+
+.navbar-hz {
+    z-index: 999;
+}
+
+.section0 {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.description1 {
+    position: absolute;
+    top: 40%;
+    z-index: 1;
+    width: 60% !important;
+    left: 20%;
+}
+.ctrmd{
+    height: 3000px;
+    display: block;
+}

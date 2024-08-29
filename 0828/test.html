@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <title>GIF Frame Control with Diagonal and Return Canvas Sliding</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 76);
+            height: max-content; /* 确保页面有足够的滚动空间 */
+            margin: 0;
+        }
+        .scroll_inter {
+            display: flex;
+            position: relative;
+            top: 50px;
+            width: 800px;
+            height: max-content;
+        }
+        .box0 {
+            opacity: 1;
+            color: white;
+            font-size: 50px;
+        }
+        .cvs {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+        }
+        .text0 {
+            padding-left: 600px;
+            top: 290px;
+            position: relative;
+        }
+        .text1 {
+            top: 2090px;
+            padding-left: 600px;
+            position: relative;
+        }
+        .text2 {
+            padding-left: 600px;
+            top: 4090px;
+            position: relative;
+            bottom: 100px;
+        }
+        .eptbox {
+            height: 10000px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('preload');
+            setTimeout(function () {
+                loader.style.display = 'none';
+            }, 2000);
+        });
+    </script>
+    <div id="preload" class="preload">
+        <link rel="stylesheet" href="./preload.css">
+        <img src="./loading.gif" alt="Loading...">
+    </div>
+    <div class="scroll-father" id="dad">
+        <div class="scroll_inter" id="scrollContainer">
+            <canvas id="gifCanvas_earth" width="500" height="500" class="cvs"></canvas>     
+        </div>
+        <div class="box0">
+            <h1 class="text0" data-aos="fade-up" duration="200ms">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, blanditiis.</h1>
+        </div>
+        <div class="box0">
+            <h1 class="text1" data-aos="fade-up" duration="200ms">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, blanditiis.</h1>
+        </div>
+        <div class="box0">
+            <h1 class="text2" data-aos="fade-up" duration="200ms">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, blanditiis.</h1>
+        </div>
+        <div class="eptbox"></div>
+    </div>
+    <script>
+        const canvas_earth = document.getElementById('gifCanvas_earth');
+        const ctx = canvas_earth.getContext('2d');
+        const scrollContainer = document.getElementById('scrollContainer');
+
+        // 预加载所有帧
+        const frames = [];
+        const totalFrames = 44; // 假设GIF有44帧
+        for (let i = 0; i < totalFrames; i++) {
+            const img = new Image();
+            img.src = `frames/${i}.png`; // 假设每帧图像文件命名为 0.png, 1.png...
+            frames.push(img);
+        }
+
+        let currentFrame = 0;
+        let positionX = 0; // 初始水平位置
+        let positionY = 0; // 初始垂直位置
+        let hasMovedRight = false; // 标记是否已经向右移动过
+
+        function drawFrame(frameIndex) {
+            ctx.clearRect(0, 0, canvas_earth.width, canvas_earth.height);
+            ctx.drawImage(frames[frameIndex], 0, 0, canvas_earth.width, canvas_earth.height);
+        }
+
+        // 初始化显示第一帧
+        frames[0].onload = () => drawFrame(0);
+
+        // 监听滚轮事件
+        window.addEventListener('wheel', (event) => {
+            event.preventDefault();
+
+            // 控制动画播放
+            const speedLevel = 1;
+            if ((currentFrame === totalFrames - 1 && event.deltaY > 0) ||
+                (currentFrame === 0 && event.deltaY < 0)) {
+                return;
+            }
+
+            if (event.deltaY < 0) {
+                currentFrame = (currentFrame > 0) ? currentFrame - speedLevel : totalFrames - speedLevel;
+            } else {
+                currentFrame = (currentFrame < totalFrames - speedLevel) ? currentFrame + speedLevel : 0;
+            }
+
+            // 控制canvas的左右和上下移动，实现先右移一半再左移
+            const moveSpeedX = 120; // 水平移动速度
+            const moveSpeedY = 20; // 垂直移动速度
+            const halfWidth = (scrollContainer.clientWidth - canvas_earth.width) / 2;
+
+            if (event.deltaY > 0) {
+                if (!hasMovedRight && positionX < halfWidth) {
+                    positionX += moveSpeedX; // 向右移动
+                } else {
+                    hasMovedRight = true;
+                    positionX -= moveSpeedX; // 返回向左移动
+                }
+                positionY += moveSpeedY; // 向下移动
+            } else {
+                if (hasMovedRight && positionX < halfWidth) {
+                    positionX += moveSpeedX; // 向右移动
+                } else {
+                    hasMovedRight = false;
+                    positionX -= moveSpeedX; // 向左移动
+                }
+                positionY -= moveSpeedY; // 向上移动
+            }
+
+            // 限制水平和垂直位置在容器范围内
+            const maxWidth = scrollContainer.clientWidth - canvas_earth.width;
+            const maxHeight = scrollContainer.clientHeight - canvas_earth.height;
+
+            if (positionX < 0) {
+                positionX = 0;
+            } else if (positionX > maxWidth) {
+                positionX = maxWidth;
+            }
+
+            if (positionY < 0) {
+                positionY = 0;
+            } else if (positionY > maxHeight) {
+                positionY = maxHeight;
+            }
+
+            // 应用动画帧和位置变化
+            drawFrame(currentFrame);
+            canvas_earth.style.transform = `translate(${positionX}px, ${positionY}px)`;
+        });
+    </script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('preload');
+    
+            setTimeout(function () {
+                loader.style.display = 'none';
+                AOS.init({
+                    duration: 1200,
+                    offset: 200,
+                    easing: 'ease-in-out',
+                    once: true,
+                });
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

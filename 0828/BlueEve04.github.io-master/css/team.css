@@ -1,0 +1,384 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(237, 243, 235);
+}
+
+
+
+
+
+
+body h1 {
+    color: #282f59;
+}
+
+body p {
+    color: #7C7C7C;
+}
+
+body a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+
+
+
+.title1{
+    padding-top: 50px;
+    text-align: center;
+}
+
+.wrapper{
+    padding-top: 600px;
+    border-radius: 30px;
+}
+
+
+
+
+
+
+
+.section1-h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.section1-h5 {
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.section1 .text {
+    margin: 5px 150px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #000000;
+}
+
+.grid-wrapper,
+.section2-content {
+    flex-basis: 50%;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    grid-gap: 4em;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+
+}
+
+.grid-wrapper img {
+    top: 80px;
+    width: 100%;
+    border-radius: 30px;
+
+}
+
+.section1 .grid-wrapper {
+    padding: 4rem;
+    grid-template-columns: 230px 230px 230px 230px;
+    justify-content: center;
+    border-radius: 30px;
+}
+
+.section1 .g2 {
+    padding: 4rem;
+    grid-gap: 8em;
+    grid-template-columns: 230px 230px;
+    justify-content: center;
+    border-radius: 30px;
+}
+
+.card {
+    position: relative;
+    border-radius: 30px;
+}
+
+.picture {
+    width: 200px;
+    border-radius: 30px;
+
+
+}
+
+.picture2 {
+    width: 200px;
+    border-radius: 30px;
+}
+
+.section1-mem {
+    height: 300px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.grid-wrapper .section1-mem .picture {
+    text-align: center;
+    height: 300px;
+    width: 100%;
+    /* border-radius: 30px 30px 0 0;  */
+    position: relative;
+}
+
+#img{
+    border-radius: 30px!important;
+}
+.grid-wrapper .section1-mem .picture2 {
+    text-align: center;
+    height: 300px;
+    width: 100%;
+    /* border-radius: 30px 30px 0 0;  */
+    position: relative;
+    border-radius: 30px;
+}
+
+.ca {
+    width: 100%;
+    height: 300px;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    /*背面朝向观察者时不可见*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.7s;
+    border-radius: 30px;
+
+}
+
+.qian img {
+    position: relative;
+    top: 70px;
+    border-radius: 30px;
+}
+
+.picture .qian {
+    overflow: hidden;
+    transform: rotateY(0deg);
+
+}
+
+.picture .hou {
+    position: relative;
+    transform: rotateY(180deg);
+    background: rgb(143, 179, 148);
+    top: 60px;
+    border-radius: 30px;
+}
+
+.picture2 .qian {
+    overflow: hidden;
+    transform: rotateY(0deg);
+    border-radius: 30px;
+
+}
+
+.picture2 .hou {
+    position: relative;
+    transform: rotateY(180deg);
+    background: rgb(174, 185, 130);
+    top: 60px;
+    border-radius: 30px;
+
+}
+
+.hou .jtext {
+    border-radius:30px 30px 0 0;
+    color: aliceblue;
+    font-family: myFont;
+    src: url(../css/江西拙楷2.0.TTF) format('truetype');
+    font-size: 20px;
+    font-weight: 700;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    opacity: 1;
+    background-color: rgba(10, 20, 20, 0.61);
+    border-radius: 30px;
+}
+
+.c .jtext2 {
+    font-family: myFont;
+    src: url(../css/江西拙楷2.0.TTF) format('truetype');
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: 700;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 0%;
+    opacity: 0;
+    background-color: rgba(10, 20, 20, 0.61);
+    transition-property: height, opacity;
+    transition-duration: 0.8s;
+    text-align: center;
+    border-radius: 40px;
+}
+
+
+.hou img {
+    display: block;
+    border-radius: 30px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.picture:hover .qian {
+    transform: rotateY(-180deg);
+    transform-style: preserve-3d;
+}
+
+.picture:hover .hou {
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+}
+
+.picture2:hover .qian {
+    transform: rotateY(-180deg);
+}
+
+.picture2:hover .hou {
+    transform: rotateY(0deg);
+}
+
+.picture .c {
+    transform: rotateY(0deg);
+}
+
+.picture2 .c {
+    transform: rotateY(0deg);
+}
+
+.picture:hover .c {
+    transform: rotateY(0deg);
+}
+
+.picture2:hover .c {
+    transform: rotateY(0deg);
+}
+
+.picture:hover .jtext2 {
+    transform: rotateY(0deg);
+    height: 100%;
+    opacity: 1;
+}
+
+.picture2:hover .jtext2 {
+    transform: rotateY(0deg);
+    height: 100%;
+    opacity: 1;
+}
+
+
+
+
+.section1-mem .content {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    height: 100px;
+    background-color: rgb(91, 113, 94);
+    font-size: 30px;
+    color: whitesmoke;
+    line-height: 50px;
+    width: 100%;
+    border-radius: 0 0 30px 30px;
+    z-index: 99;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 夹带私货*/
+.rotate {
+    position: relative;
+    perspective: 3000px;
+    /* 设置透视视角 */
+    height: 600px;
+    transition: all 1s;
+}
+
+.box {
+    position: absolute;
+    width: 900px;
+    /* 800/2.5 */
+    height: 400px;
+    margin-left: 400px;
+    padding: 150px;
+    transform-style: preserve-3d;
+    /* 保留 3D 转换 */
+    animation: rotation 30s infinite linear;
+    /* 旋转动画 */
+    transform-origin: 50% 50%;
+    transition: all 1s ease-in-out;
+}
+
+.rotate-img {
+    position: fixed;
+    width: 600px;
+    /* 800/2.5 */
+    height: 400px;
+    opacity: 0.5;
+    object-fit:contain;
+    transition: 0.51s;
+}
+.rotate-img:hover{
+    opacity: 1.0;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+/* 根据图片数量调整旋转角度 */
+.box img:nth-child(1) {
+    transform: rotateY(0deg) translateZ(470px);
+    /* 320/2 */
+}
+
+.box img:nth-child(2) {
+    transform: rotateY(72deg) translateZ(470px);
+}
+
+.box img:nth-child(3) {
+    transform: rotateY(144deg) translateZ(470px);
+}
+
+.box img:nth-child(4) {
+    transform: rotateY(216deg) translateZ(470px);
+}
+
+.box img:nth-child(5) {
+    transform: rotateY(288deg) translateZ(470px);
+}

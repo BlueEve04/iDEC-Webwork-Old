@@ -1,0 +1,69 @@
+/* 侧边导航菜单 */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    left: 300px;
+    top: 100px;
+    height: 600px;
+    overflow: auto;
+}
+.big{
+    position: relative;
+    display:inline-block;
+}
+.big .right p{
+    padding-left: 700px;
+    padding-top: 300px;
+
+}
+/* 侧边栏链接 */
+.big .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+/* 活动/当前链接 */
+.big .sidebar a.active {
+    background-color: #2481dd;
+    color: white;
+}
+
+/* 鼠标悬停链接 */
+.sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+/* 页面内容。 margin-left 属性的值应该与侧边栏的 width 属性的值匹配 */
+
+/* 在宽度小于 700px 的屏幕上，将侧边栏变成顶部栏 
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .sidebar a {
+        float: left;
+    }
+
+    div.content {
+        margin-left: 0;
+    }
+}
+
+/*在小于 400px 的屏幕上，垂直显示栏，而不是水平显示 
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
+*/
