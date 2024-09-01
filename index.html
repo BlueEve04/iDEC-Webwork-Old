@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style/preload.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('preload');
+            setTimeout(function () {
+                loader.style.display = 'none';
+            }, 2000);
+        });
+</script>
+<div id="preload" class="preload">
+    <link rel="stylesheet" href="./preload.css">
+    <img src="./loading.gif" alt="Loading...">
+</div>
+    <div class="container">
+        <div class="scroll_inner" >
+            <canvas id="gifCanvas_earth" width="500" height="500" class="cvs" data-aos="silde-right"></canvas>     
+            <h1 class="t1 aos-hover-zoom" data-aos="fade-up-left" data-aos-duration="1500ms">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, sit quia! Eaque quam non optio recusandae iusto quia eos architecto, natus distinctio ullam fugiat odio. Incidunt, soluta, obcaecati enim facere aliquid iusto numquam quibusdam exercitationem, a totam illum animi voluptas!</h1>
+            <h1 class="t2 aos-hover-zoom" data-aos="fade-up-right" data-aos-duration="1500ms">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ea, quidem officia tempore necessitatibus illum fuga vero eligendi pariatur dignissimos obcaecati reiciendis amet tempora ex voluptatem a inventore quia modi sint ab? Aliquam excepturi facilis consequatur amet molestiae voluptatum aperiam.</h1>
+            <h1 class="t3 aos-hover-zoom" data-aos="fade-up-left" data-aos-duration="1500ms">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis numquam animi, placeat totam quas iusto iure officiis aut natus vitae rerum fugit asperiores, culpa id repellat eveniet magni delectus ipsa eius et, optio dolor! Placeat eius ducimus quo aliquid laborum.</h1>
+        </div>
+    </div>
+</body>
+<script src="./script/movement.js"></script>
+<script src="./script/position_log.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('preload');
+    
+            setTimeout(function () {
+                loader.style.display = 'none';
+                AOS.init({
+                    duration: 600,
+                    offset: 50,
+                    easing: 'ease-in-out',
+                    once: false,
+                });
+            }, 2000);
+        });
+    </script>
+</html>
